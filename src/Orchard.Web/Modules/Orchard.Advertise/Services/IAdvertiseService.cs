@@ -12,6 +12,6 @@ namespace Orchard.Advertise.Services {
         ContentItem Get(int id, VersionOptions versionOptions);
         IEnumerable<AdvertisePart> Get();
         IEnumerable<AdvertisePart> Get(VersionOptions versionOptions);
-        void Delete(ContentItem blog);
+        void Delete(ContentItem advertisement);
     }
 }

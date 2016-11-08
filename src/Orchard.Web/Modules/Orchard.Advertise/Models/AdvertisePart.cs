@@ -14,8 +14,8 @@ namespace Orchard.Advertise.Models {
         [DisplayName("Order of advertise,order rule is AESC")]
         [Required]
         public int SortID {
-            get { return Record.SortID; }
-            set { Record.SortID=value; }
+            get { return Retrieve(r => r.SortID); }
+            set { Store(r => r.SortID, value); }
         }
     }
 }

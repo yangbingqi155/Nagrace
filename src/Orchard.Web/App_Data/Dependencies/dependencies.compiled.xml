@@ -28,7 +28,7 @@
     <ExtensionId>Orchard.Advertise</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/Orchard.Advertise/Orchard.Advertise.csproj</VirtualPath>
-    <Hash>10767af6a3489b41</Hash>
+    <Hash>107766aeb4f8ff26</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Alias</ExtensionId>

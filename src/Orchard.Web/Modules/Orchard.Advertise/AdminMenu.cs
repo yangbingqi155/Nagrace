@@ -36,7 +36,7 @@ namespace Orchard.Advertise {
 
             if (advertiseCount > 0 && singleAdvertise == null) {
                 menu.Add(T("Manage Advertises"), "3",
-                         item => item.Action("List", "AdvertiseAdmin", new { area = "Orchard.Advertise" }).Permission(Permissions.ManageOwnAdvertise));
+                         item => item.Action("List", "AdvertiseAdmin", new { area = "Orchard.Advertise" }).Permission(Permissions.ManageAdvertise));
             }
             else if (singleAdvertise != null)
                 menu.Add(T("Manage Advertise"), "1.0",
