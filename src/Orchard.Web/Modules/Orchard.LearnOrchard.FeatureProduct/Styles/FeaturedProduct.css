@@ -1,0 +1,25 @@
+﻿.btn-featuredproduct {
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #34A853;
+    font-size: 2em;
+    display: block;
+}
+
+.label-onsale {
+    background-color: #d44950;
+    color: #fff;
+    float: right;
+    padding: .25em 1em;
+    display: inline;
+}
+
+.box-moreinfoavailable {
+    padding: 1em;
+    text-align: center;
+    color: #fff;
+    background-color: #7b4f9d;
+    font-size: 2em;
+    display: block;
+}

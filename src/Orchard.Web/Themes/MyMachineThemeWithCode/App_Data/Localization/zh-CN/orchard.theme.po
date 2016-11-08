@@ -1,0 +1,9 @@
+#: "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "Home"
+msgstr "首页"
+
+#: "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgctxt "~/Core/Containers/Views/EditorTemplates/ContainerWidget.cshtml"
+msgid "admin"
+msgstr "管理员"

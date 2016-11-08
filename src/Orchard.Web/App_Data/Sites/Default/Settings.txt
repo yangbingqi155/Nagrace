@@ -1,0 +1,13 @@
+State: Running
+Themes: 
+Modules: 
+Name: Default
+DataProvider: SqlServer
+DataConnectionString: Data Source=58.60.186.28;Initial Catalog=Nagrace;User ID=valor;Password=sa12345
+DataTablePrefix: MyFirstOrchard
+RequestUrlHost: null
+RequestUrlPrefix: null
+EncryptionAlgorithm: AES
+EncryptionKey: 2979DA30B5D98145136B3DA3E48B650A50CD36550E2A9A2A887C130A8B9A8596
+HashAlgorithm: HMACSHA256
+HashKey: 428BC704D3AA4C9C64F81E0269E9C908BEE4E3CABD8B26DB4019882FCC843ABCD38D03AF6A6723FA296B7DB0A69ACC2C1902989E7D3250DAF069C92406B87100

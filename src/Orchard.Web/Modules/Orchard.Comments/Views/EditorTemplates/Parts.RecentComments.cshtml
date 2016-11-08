@@ -1,0 +1,23 @@
+﻿@model Orchard.Comments.ViewModels.RecentCommentsViewModel
+
+@using Orchard.Comments.Models
+@using Orchard.ContentManagement
+@using Orchard.Blogs.Models
+
+
+<fieldset>
+    <div>
+        @Html.LabelFor(m => m.ContainerID, T("For Blog"))
+        <select id="@Html.FieldIdFor(m => m.ContainerID)" name="@Html.FieldNameFor(m => m.ContainerID)">
+            @foreach (BlogPart blog in Model.Blogs) {
+                @Html.SelectOption(Model.ContainerID, blog.ContentItem.Id, blog.Name)
+            }
+        </select>
+        <span class="hint">@T("Select which blog you want to display the recent comments for")</span>
+    </div>
+    <div>
+        @Html.LabelFor(model=>model.Count,T("Count"))
+        @Html.TextBoxFor(model=>model.Count,new { @class= "text small" })
+        <span class="hint">@T("Number of posts to display. Zero for all.")</span>
+    </div>
+</fieldset>

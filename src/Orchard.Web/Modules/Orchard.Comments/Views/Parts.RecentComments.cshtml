@@ -1,0 +1,10 @@
+﻿@using Orchard.Comments.Models
+@{
+    //CommentsPart commentsPart = Model.ContentPart;
+
+    // add 'comments' class on the list container
+    Model.List.Classes.Add("comments");
+}
+
+<h2 class="comment-count">@T.Plural("No Comments", "1 Comment", "{0} Comments", (int)Model.CommentCount)</h2>
+@Display(Model.List)

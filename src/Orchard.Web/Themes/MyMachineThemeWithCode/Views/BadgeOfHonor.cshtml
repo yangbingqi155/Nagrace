@@ -1,0 +1,4 @@
+﻿@{
+    var clock = WorkContext.Resolve<Orchard.Services.IClock>();
+}
+<div class="credits"> <span class="copyright">@T("{0} Nagrace Telecom Equipment Co., Ltd.All rights reserved.", clock.UtcNow.Year)</span></div>

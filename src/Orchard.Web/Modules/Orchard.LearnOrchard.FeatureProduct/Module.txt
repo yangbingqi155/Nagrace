@@ -1,0 +1,12 @@
+﻿Name: Orchard.LearnOrchard.FeatureProduct
+AntiForgery: enabled
+Author: yangbq
+Website: http://orchardproject.net
+Version: 1.0
+OrchardVersion: 1.0
+Description: Description for the module
+Category: Learn Orchard
+Features:
+    Orchard.LearnOrchard.FeatureProduct:
+        Description: Description for feature Orchard.LearnOrchard.FeatureProduct.
+		Dependencies: Orchard.Widgets , Orchard.Alias
