@@ -20,70 +20,26 @@ namespace Orchard.Advertise {
             ContentDefinitionManager.AlterTypeDefinition("Advertise",
                 cfg => cfg
                     .WithIdentity()
-                    .WithPart(typeof(AdvertisePart).Name)
-                    .WithPart("CommonPart")
                     .WithPart("TitlePart")
-                    .WithPart("AutoroutePart", builder => builder
-                        .WithSetting("AutorouteSettings.AllowCustomPattern", "True")
-                        .WithSetting("AutorouteSettings.AutomaticAdjustmentOnEdit", "False")
-                        .WithSetting("AutorouteSettings.PatternDefinitions", "[{\"Name\":\"Title\",\"Pattern\":\"{Content.Slug}\",\"Description\":\"my-advertise\"}]"))
-                    .WithPart("MenuPart")
-                    .WithPart("AdminMenuPart", p => p.WithSetting("AdminMenuPartTypeSettings.DefaultPosition", "2"))
+                    .RemovePart(typeof(AdvertisePart).Name)
+                   .WithPart(typeof(AdvertisePart).Name)
                 );
-
-            return 4;
-        }
-
-        public int UpdateFrom1() {
-            SchemaBuilder.CreateTable(typeof(AdvertisePartRecord).Name,
-               table => table
-                   .Column<int>("SortID")
-               );
-
-            ContentDefinitionManager.AlterPartDefinition(typeof(AdvertisePart).Name, builder => {
-                builder.WithDescription("Advertise part for advertise of site.");
-            });
-
-            ContentDefinitionManager.AlterTypeDefinition("Advertise", builder => {
-                builder.WithPart(typeof(AdvertisePart).Name).WithPart("CommonPart")
-                    .WithPart("TitlePart");
-            });
 
             return 2;
         }
 
-
-        public int UpdateFrom2() {
+        public int UpdateFrom1() {
             ContentDefinitionManager.AlterTypeDefinition("Advertise",
-                cfg => cfg
-                    .WithPart(typeof(AdvertisePart).Name)
-                    .WithPart("CommonPart")
-                    .WithPart("TitlePart")
-                    .WithPart("AutoroutePart", builder => builder
-                        .WithSetting("AutorouteSettings.AllowCustomPattern", "True")
-                        .WithSetting("AutorouteSettings.AutomaticAdjustmentOnEdit", "False")
-                        .WithSetting("AutorouteSettings.PatternDefinitions", "[{\"Name\":\"Title\",\"Pattern\":\"{Content.Slug}\",\"Description\":\"my-advertise\"}]"))
-                    .WithPart("MenuPart")
-                    .WithPart("AdminMenuPart", p => p.WithSetting("AdminMenuPartTypeSettings.DefaultPosition", "2"))
-                );
-
-     
-
-            return 3;
+               cfg => cfg
+                   .RemovePart("CommonPart")
+                   .RemovePart("AutoroutePart")
+                   .RemovePart("MenuPart")
+                   .RemovePart("AdminMenuPart")
+                   .RemovePart(typeof(AdvertisePart).Name)
+                   .WithPart(typeof(AdvertisePart).Name)
+               );
+            return 2;
         }
 
-        public int UpdateFrom3() {
-            ContentDefinitionManager.AlterTypeDefinition("Advertise",
-                cfg => cfg
-                    .WithIdentity()
-                );
-
-
-
-            return 4;
-        }
-        
-
-      
     }
 }
