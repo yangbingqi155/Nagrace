@@ -14,7 +14,11 @@ namespace Orchard.Advertise {
                 );
             
             ContentDefinitionManager.AlterPartDefinition(typeof(AdvertisePart).Name, builder => {
-                builder.WithDescription("Advertise part for advertise of site.");
+                builder.WithDescription("Advertise part for advertise of site.").WithField("Image",
+                    fieldBuilder =>
+                    fieldBuilder.OfType("MediaLibraryPickerField")
+                    .WithDisplayName("Advertise image")
+                );
             });
             
             ContentDefinitionManager.AlterTypeDefinition("Advertise",
@@ -24,7 +28,15 @@ namespace Orchard.Advertise {
                    .WithPart(typeof(AdvertisePart).Name)
                 );
 
-            return 2;
+            ContentDefinitionManager.AlterTypeDefinition("AdvertiseWidget",
+                cfg => cfg
+                    .WithIdentity()
+                    .WithPart(typeof(AdvertisePart).Name)
+                    .WithPart("WidgetPart")
+                    .WithPart("CommonPart")
+                    .WithSetting("Stereotype", "Widget")
+                );
+            return 3;
         }
 
         public int UpdateFrom1() {
@@ -37,7 +49,20 @@ namespace Orchard.Advertise {
             });
             return 2;
         }
-        
+
+        public int UpdateFrom2() {
+            ContentDefinitionManager.AlterTypeDefinition("AdvertiseWidget",
+                cfg => cfg
+                    .WithIdentity()
+                    .WithPart(typeof(AdvertisePart).Name)
+                    .WithPart("WidgetPart")
+                    .WithPart("CommonPart")
+                    .WithSetting("Stereotype", "Widget")
+                );
+            return 3;
+        }
+
+
 
     }
 }
