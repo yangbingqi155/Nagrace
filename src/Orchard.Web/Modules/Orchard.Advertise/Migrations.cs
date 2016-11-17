@@ -21,7 +21,6 @@ namespace Orchard.Advertise {
                 cfg => cfg
                     .WithIdentity()
                     .WithPart("TitlePart")
-                    .RemovePart(typeof(AdvertisePart).Name)
                    .WithPart(typeof(AdvertisePart).Name)
                 );
 
@@ -29,17 +28,16 @@ namespace Orchard.Advertise {
         }
 
         public int UpdateFrom1() {
-            ContentDefinitionManager.AlterTypeDefinition("Advertise",
-               cfg => cfg
-                   .RemovePart("CommonPart")
-                   .RemovePart("AutoroutePart")
-                   .RemovePart("MenuPart")
-                   .RemovePart("AdminMenuPart")
-                   .RemovePart(typeof(AdvertisePart).Name)
-                   .WithPart(typeof(AdvertisePart).Name)
-               );
+            ContentDefinitionManager.AlterPartDefinition(typeof(AdvertisePart).Name, builder => {
+                builder.WithField("Image",
+                    fieldBuilder =>
+                    fieldBuilder.OfType("MediaLibraryPickerField")
+                    .WithDisplayName("Advertise image")
+                );
+            });
             return 2;
         }
+        
 
     }
 }
