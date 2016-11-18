@@ -10,6 +10,7 @@ using Orchard.Environment.State;
 using Orchard.Services;
 using Orchard.Advertise.Models;
 using Orchard.Core.Title.Models;
+using Orchard.Localization.Models;
 
 namespace Orchard.Advertise.Services {
     public class AdvertiseService : IAdvertiseService {
@@ -48,8 +49,8 @@ namespace Orchard.Advertise.Services {
         }
 
         public ContentItem Get(int id, VersionOptions versionOptions) {
-            var blogPart = _contentManager.Get<AdvertisePart>(id, versionOptions);
-            return blogPart == null ? null : blogPart.ContentItem;
+            var advertisePart = _contentManager.Get<AdvertisePart>(id, versionOptions);
+            return advertisePart == null ? null : advertisePart.ContentItem;
         }
 
         public IEnumerable<AdvertisePart> Get() {
@@ -60,6 +61,14 @@ namespace Orchard.Advertise.Services {
             return _contentManager.Query<AdvertisePart>(versionOptions, "Advertise")
                 .Join<TitlePartRecord>()
                 .OrderBy(br => br.Title)
+                .List();
+        }
+
+
+        public IEnumerable<AdvertisePart> Get(VersionOptions versionOptions,int cultureId) {
+            return _contentManager.Query<AdvertisePart>(versionOptions, "Advertise")
+                .Join<LocalizationPartRecord>()
+                .Where(en=>en.CultureId== cultureId)
                 .List();
         }
 

@@ -6,6 +6,9 @@
     <Place Parts_Advertise_Edit="Content:2"/>
     <Place Advertise_DeleteButton="Sidebar:25" />
 
+    <Match ContentType="AdvertiseWidget">
+      <Place Parts_AdvertiseHome="Content" />
+    </Match>
     <!-- default positioning -->
     <Match ContentType="Advertise">
         <Match DisplayType="Detail">

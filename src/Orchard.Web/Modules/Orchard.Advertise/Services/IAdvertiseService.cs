@@ -12,6 +12,7 @@ namespace Orchard.Advertise.Services {
         ContentItem Get(int id, VersionOptions versionOptions);
         IEnumerable<AdvertisePart> Get();
         IEnumerable<AdvertisePart> Get(VersionOptions versionOptions);
+        IEnumerable<AdvertisePart> Get(VersionOptions versionOptions, int cultureId);
         void Delete(ContentItem advertisement);
     }
 }

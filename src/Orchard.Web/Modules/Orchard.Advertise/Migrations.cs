@@ -20,23 +20,26 @@ namespace Orchard.Advertise {
                     .WithDisplayName("Advertise image")
                 );
             });
-            
+
             ContentDefinitionManager.AlterTypeDefinition("Advertise",
                 cfg => cfg
                     .WithIdentity()
                     .WithPart("TitlePart")
                    .WithPart(typeof(AdvertisePart).Name)
+                   .WithPart("LocalizationPart")
                 );
 
             ContentDefinitionManager.AlterTypeDefinition("AdvertiseWidget",
                 cfg => cfg
                     .WithIdentity()
-                    .WithPart(typeof(AdvertisePart).Name)
+                    .WithPart("LocalizationPart")
                     .WithPart("WidgetPart")
                     .WithPart("CommonPart")
                     .WithSetting("Stereotype", "Widget")
+                    .WithPart("AdvertiseHomePart")
                 );
-            return 3;
+
+            return 5;
         }
 
         public int UpdateFrom1() {
@@ -54,7 +57,6 @@ namespace Orchard.Advertise {
             ContentDefinitionManager.AlterTypeDefinition("AdvertiseWidget",
                 cfg => cfg
                     .WithIdentity()
-                    .WithPart(typeof(AdvertisePart).Name)
                     .WithPart("WidgetPart")
                     .WithPart("CommonPart")
                     .WithSetting("Stereotype", "Widget")
@@ -62,7 +64,26 @@ namespace Orchard.Advertise {
             return 3;
         }
 
+        public int UpdateFrom3() {
+            ContentDefinitionManager.AlterTypeDefinition("Advertise",
+               cfg => cfg
+                  .WithPart("LocalizationPart")
+               );
+            ContentDefinitionManager.AlterTypeDefinition("AdvertiseWidget",
+                cfg => cfg
+                    .WithPart("LocalizationPart")
+                );
+            
+            return 4;
+        }
 
+        public int UpdateFrom4() {
+            ContentDefinitionManager.AlterTypeDefinition("AdvertiseWidget",
+                cfg => cfg
+                    .WithPart("AdvertiseHomePart")
+                );
+            return 5;
+        }
 
     }
 }

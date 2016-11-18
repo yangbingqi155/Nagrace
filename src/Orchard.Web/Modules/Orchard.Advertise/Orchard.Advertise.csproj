@@ -97,12 +97,15 @@
   <ItemGroup>
     <Compile Include="AdminMenu.cs" />
     <Compile Include="Controllers\AdvertiseAdminController.cs" />
+    <Compile Include="Drivers\AdvertiseHomePartDriver.cs" />
     <Compile Include="Drivers\AdvertisePartDriver.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="Handlers\AdvertisePartHandler.cs" />
     <Compile Include="Migrations.cs" />
+    <Compile Include="Models\AdvertiseHomePartRecord.cs" />
     <Compile Include="Models\AdvertisePart.cs" />
     <Compile Include="Models\AdvertisePartRecord.cs" />
+    <Compile Include="Models\AdvertiseHomePart.cs" />
     <Compile Include="Permissions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AdvertiseService.cs" />
@@ -129,13 +132,22 @@
       <Name>Orchard.Core</Name>
       <Private>false</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Orchard.Alias\Orchard.Alias.csproj">
+      <Project>{475B6C45-B27C-438B-8966-908B9D6D1077}</Project>
+      <Name>Orchard.Alias</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Orchard.Autoroute\Orchard.Autoroute.csproj">
       <Project>{66fccd76-2761-47e3-8d11-b45d0001ddaa}</Project>
       <Name>Orchard.Autoroute</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModels\" />
+    <ProjectReference Include="..\Orchard.Localization\Orchard.Localization.csproj">
+      <Project>{FBC8B571-ED50-49D8-8D9D-64AB7454A0D6}</Project>
+      <Name>Orchard.Localization</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Orchard.MediaLibrary\Orchard.MediaLibrary.csproj">
+      <Project>{73a7688a-5bd3-4f7e-adfa-ce36c5a10e3b}</Project>
+      <Name>Orchard.MediaLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -165,6 +177,15 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts.Advertise.Advertise.Manage.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Widget-AdvertiseWidget.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts.AdvertiseHome.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
