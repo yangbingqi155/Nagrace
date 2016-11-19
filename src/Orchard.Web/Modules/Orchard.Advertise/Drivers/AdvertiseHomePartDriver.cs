@@ -45,7 +45,7 @@ namespace Orchard.Advertise.Drivers {
             
             int cultureId = CurrentContent.As<LocalizationPart>().Culture.Id;
 
-            IEnumerable<AdvertisePart> parts= _advertiseService.Get(VersionOptions.AllVersions, cultureId);
+            IEnumerable<AdvertisePart> parts= _advertiseService.Get(VersionOptions.Latest, cultureId);
        
             return ContentShape("Parts_AdvertiseHome", () => {
 

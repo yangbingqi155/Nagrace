@@ -158,17 +158,13 @@ namespace Orchard.Advertise.Controllers {
 
         public ActionResult Item(int advertiseId, PagerParameters pagerParameters) {
             Pager pager = new Pager(_siteService.GetSiteSettings(), pagerParameters);
-            AdvertisePart advertisePart = _advertiseService.Get(advertiseId, VersionOptions.Latest).As<AdvertisePart>();
+            var advertise = _advertiseService.Get(advertiseId, VersionOptions.Latest);
 
-            if (advertisePart == null)
+            if (advertise == null)
                 return HttpNotFound();
             
-            var advertise = Services.ContentManager.BuildDisplay(advertisePart, "DetailAdmin");
-            
-            //var totalItemCount = _advertiseService.PostCount(advertisePart, VersionOptions.Latest);
-            //blog.Content.Add(Shape.Pager(pager).TotalItemCount(totalItemCount), "Content:after");
-
-            return View(advertise);
+            var model = Services.ContentManager.BuildDisplay(advertise);
+            return View(model);
         }
 
         bool IUpdateModel.TryUpdateModel<TModel>(TModel model, string prefix, string[] includeProperties, string[] excludeProperties) {

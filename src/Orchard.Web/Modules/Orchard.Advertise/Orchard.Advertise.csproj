@@ -97,6 +97,7 @@
   <ItemGroup>
     <Compile Include="AdminMenu.cs" />
     <Compile Include="Controllers\AdvertiseAdminController.cs" />
+    <Compile Include="Controllers\AdvertiseController.cs" />
     <Compile Include="Drivers\AdvertiseHomePartDriver.cs" />
     <Compile Include="Drivers\AdvertisePartDriver.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
@@ -163,7 +164,7 @@
     <Content Include="Views\AdvertiseAdmin\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Parts.Advertise.SummaryAdmin.cshtml" />
+    <Content Include="Views\Content-Advertise.SummaryAdmin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Advertise.DeleteButton.cshtml" />
@@ -180,12 +181,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ViewModels\" />
+    <Folder Include="Views\Advertise\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Widget-AdvertiseWidget.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Parts.AdvertiseHome.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Parts.Advertise.Advertise.Description.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

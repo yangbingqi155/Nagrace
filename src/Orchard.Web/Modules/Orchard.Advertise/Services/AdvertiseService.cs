@@ -18,7 +18,7 @@ namespace Orchard.Advertise.Services {
         private readonly IProcessingEngine _processingEngine;
         private readonly ShellSettings _shellSettings;
         private readonly IShellDescriptorManager _shellDescriptorManager;
-        private readonly HashSet<int> _processedBlogParts = new HashSet<int>();
+        private readonly HashSet<int> _processedAdvertiseParts = new HashSet<int>();
         IPathResolutionService _pathResolutionService;
 
         public AdvertiseService(
@@ -63,7 +63,6 @@ namespace Orchard.Advertise.Services {
                 .OrderBy(br => br.Title)
                 .List();
         }
-
 
         public IEnumerable<AdvertisePart> Get(VersionOptions versionOptions,int cultureId) {
             return _contentManager.Query<AdvertisePart>(versionOptions, "Advertise")
