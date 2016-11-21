@@ -13,6 +13,7 @@ namespace MyMachineThemeWithCode {
             manifest.DefineScript("Bootstrap").SetUrl("bootstrap-3.3.5/js/bootstrap.min.js", "bootstrap-3.3.5/js/bootstrap.js").SetVersion("3.3.4").SetDependencies("jQuery");
             manifest.DefineScript("Less").SetUrl("CssLess/less.min.js", "CssLess/less.js");
             manifest.DefineScript("Nav").SetUrl("Nav.js").SetDependencies("jQuery");
+            manifest.DefineScript("Animate").SetUrl("Wow/wow.min.jss", "Wow/wow.js");
 
             /*******Css********/
             //Bootstrap
@@ -27,6 +28,9 @@ namespace MyMachineThemeWithCode {
 
             //blog
             manifest.DefineStyle("SiteLayoutBlog").SetUrl("site-layout-blog.less").SetAttribute("rel", "stylesheet/less");
+
+            //Wow animate
+            manifest.DefineStyle("Animate").SetUrl("Wow/animate.css").SetAttribute("rel", "stylesheet/css");
         }
     }
 }
