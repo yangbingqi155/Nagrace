@@ -115,7 +115,17 @@
     <Content Include="Scripts\bootstrap-3.3.5\js\transition.js" />
     <Content Include="Scripts\CssLess\less.js" />
     <Content Include="Scripts\CssLess\less.min.js" />
+    <Content Include="Scripts\html5shiv\html5shiv-printshiv.js" />
+    <Content Include="Scripts\html5shiv\html5shiv-printshiv.min.js" />
+    <Content Include="Scripts\html5shiv\html5shiv.js" />
+    <Content Include="Scripts\html5shiv\html5shiv.min.js" />
     <Content Include="Scripts\Nav.js" />
+    <Content Include="Scripts\Respond\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\Respond\respond.matchmedia.addListener.src.js" />
+    <Content Include="Scripts\Respond\respond.min.js" />
+    <Content Include="Scripts\Respond\respond.src.js" />
+    <Content Include="Scripts\Wow\wow.js" />
+    <Content Include="Scripts\Wow\wow.min.js" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff" />
@@ -195,6 +205,7 @@
     <None Include="Styles\default-grid.less" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.svg" />
     <None Include="Styles\site-home.less" />
+    <Content Include="Styles\Wow\animate.css" />
     <Content Include="ThemeZonePreview.png" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
