@@ -1,0 +1,11 @@
+﻿@model Orchard.Product.Models.ProductPart
+
+<fieldset>
+    <div class="editor-label">
+        @Html.LabelFor(model=>model.SortID,T(Html.DisplayNameFor(model=>model.SortID).ToHtmlString()))
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model=>model.SortID)
+        @Html.ValidationMessageFor(model=>model.SortID)
+    </div>
+</fieldset>

@@ -292,6 +292,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VirtoCommerce.Webshop", "Or
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Advertise", "Orchard.Web\Modules\Orchard.Advertise\Orchard.Advertise.csproj", "{B7CBEED6-74C8-4911-B63F-401AF8DBE7F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orchard.Product", "Orchard.Web\Modules\Orchard.Product\Orchard.Product.csproj", "{E46A90A8-58F1-4C90-A02F-8BBE459078F8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		CodeCoverage|Any CPU = CodeCoverage|Any CPU
@@ -1192,6 +1194,13 @@ Global
 		{B7CBEED6-74C8-4911-B63F-401AF8DBE7F8}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CBEED6-74C8-4911-B63F-401AF8DBE7F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7CBEED6-74C8-4911-B63F-401AF8DBE7F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8}.CodeCoverage|Any CPU.ActiveCfg = Release|Any CPU
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8}.Coverage|Any CPU.ActiveCfg = Release|Any CPU
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8}.FxCop|Any CPU.ActiveCfg = Release|Any CPU
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -1287,6 +1296,7 @@ Global
 		{D8CAD68E-912F-4C2B-BC2E-2AAE7948CADC} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{C3C62FAA-4CF0-45A5-9981-E3FD4D8B2A43} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 		{B7CBEED6-74C8-4911-B63F-401AF8DBE7F8} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
+		{E46A90A8-58F1-4C90-A02F-8BBE459078F8} = {E9C9F120-07BA-4DFB-B9C3-3AFB9D44C9D5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\TransientFaultHandling.Core.5.1.1209.1\lib\NET4

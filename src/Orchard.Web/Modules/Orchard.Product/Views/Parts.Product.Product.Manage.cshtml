@@ -1,0 +1,10 @@
+﻿@using Orchard.Product.Extensions;
+@using Orchard.Product.Models;
+@{
+    Style.Require("ProductAdmin");
+}
+@if (AuthorizedFor(Orchard.Product.Permissions.ManageProduct)) {
+<div class="item-properties actions">
+    <p><a href="@Url.ProductEdit((ProductPart)Model.ContentPart)" class="edit">@T("Product Properties")</a></p>
+</div>
+}

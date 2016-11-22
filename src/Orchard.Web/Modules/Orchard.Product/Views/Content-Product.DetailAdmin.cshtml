@@ -1,0 +1,12 @@
+﻿@using Orchard.Product.Extensions;
+@using Orchard.Product.Models;
+@using Orchard.ContentManagement
+
+@{
+    ContentItem product = Model.ContentItem;
+    var displayText = product.ContentManager.GetItemMetadata(product).DisplayText;
+    Layout.Title = T("Manage {0}", displayText);
+}
+@Display(Model.Header)
+@Display(Model.Actions)
+@Display(Model.Content)
