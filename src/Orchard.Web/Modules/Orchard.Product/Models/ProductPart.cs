@@ -17,5 +17,28 @@ namespace Orchard.Product.Models {
             get { return Retrieve(r => r.SortID); }
             set { Store(r => r.SortID, value); }
         }
+
+        /// <summary>
+        /// 产品名称
+        /// </summary>
+        [DisplayName("The name of product")]
+        [Required]
+        public string PName
+        {
+            get { return Retrieve(r => r.PName); }
+            set { Store(r => r.PName, value); }
+        }
+
+        /// <summary>
+        /// 产品简称
+        /// </summary>
+        [DisplayName("The abbreviation name of product")]
+        [Required]
+        public  string AbbrePName
+        {
+            get { return Retrieve(r => r.AbbrePName); }
+            set { Store(r => r.AbbrePName, value); }
+        }
+
     }
 }

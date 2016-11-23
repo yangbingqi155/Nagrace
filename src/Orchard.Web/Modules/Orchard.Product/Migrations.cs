@@ -10,6 +10,8 @@ namespace Orchard.Product {
         public int Create() {
             SchemaBuilder.CreateTable(typeof(ProductPartRecord).Name,
                 table => table.ContentPartRecord()
+                    .Column<string>("PName")
+                    .Column<string>("AbbrePName")
                     .Column<int>("SortID")
                 );
             

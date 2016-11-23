@@ -283,6 +283,12 @@
     <Hash>dbc9b6770e92c23d</Hash>
   </Dependency>
   <Dependency>
+    <ExtensionId>Orchard.Product</ExtensionId>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Orchard.Product/Orchard.Product.csproj</VirtualPath>
+    <Hash>5720b98164dba3ca</Hash>
+  </Dependency>
+  <Dependency>
     <ExtensionId>Orchard.Projections</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/Orchard.Projections/bin/Orchard.Projections.dll</VirtualPath>
