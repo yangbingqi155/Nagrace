@@ -12,6 +12,10 @@ namespace Orchard.Product {
                 table => table.ContentPartRecord()
                     .Column<string>("PName")
                     .Column<string>("AbbrePName")
+                    .Column<string>("Feature",column=>column.Unlimited())
+                    .Column<string>("Spec", column => column.Unlimited())
+                    .Column<string>("Package", column => column.Unlimited())
+                    .Column<string>("Review", column => column.Unlimited())
                     .Column<int>("SortID")
                 );
             
@@ -30,62 +34,28 @@ namespace Orchard.Product {
                    .WithPart(typeof(ProductPart).Name)
                    .WithPart("LocalizationPart")
                 );
+    
 
-            ContentDefinitionManager.AlterTypeDefinition("ProductWidget",
-                cfg => cfg
-                    .WithIdentity()
-                    .WithPart("LocalizationPart")
-                    .WithPart("WidgetPart")
-                    .WithPart("CommonPart")
-                    .WithSetting("Stereotype", "Widget")
-                    .WithPart("ProductHomePart")
-                );
-
-            return 5;
+            return 2;
         }
 
         public int UpdateFrom1() {
             ContentDefinitionManager.AlterPartDefinition(typeof(ProductPart).Name, builder => {
-                builder.WithField("Image",
+                builder.WithDescription("Product part for product of site.").WithField("Image",
                     fieldBuilder =>
                     fieldBuilder.OfType("MediaLibraryPickerField")
                     .WithDisplayName("Product image")
                 );
             });
-            return 2;
-        }
 
-        public int UpdateFrom2() {
-            ContentDefinitionManager.AlterTypeDefinition("ProductWidget",
+            ContentDefinitionManager.AlterTypeDefinition("Product",
                 cfg => cfg
                     .WithIdentity()
-                    .WithPart("WidgetPart")
-                    .WithPart("CommonPart")
-                    .WithSetting("Stereotype", "Widget")
+                    .WithPart("TitlePart")
+                   .WithPart(typeof(ProductPart).Name)
+                   .WithPart("LocalizationPart")
                 );
-            return 3;
+            return 2;
         }
-
-        public int UpdateFrom3() {
-            ContentDefinitionManager.AlterTypeDefinition("Product",
-               cfg => cfg
-                  .WithPart("LocalizationPart")
-               );
-            ContentDefinitionManager.AlterTypeDefinition("ProductWidget",
-                cfg => cfg
-                    .WithPart("LocalizationPart")
-                );
-            
-            return 4;
-        }
-
-        public int UpdateFrom4() {
-            ContentDefinitionManager.AlterTypeDefinition("ProductWidget",
-                cfg => cfg
-                    .WithPart("ProductHomePart")
-                );
-            return 5;
-        }
-
     }
 }

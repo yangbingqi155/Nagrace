@@ -286,7 +286,7 @@
     <ExtensionId>Orchard.Product</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/Orchard.Product/Orchard.Product.csproj</VirtualPath>
-    <Hash>5720b98164dba3ca</Hash>
+    <Hash>58988429e21e488f</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Projections</ExtensionId>

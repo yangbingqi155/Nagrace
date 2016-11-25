@@ -78,7 +78,7 @@
     <Compile Include="AdminMenu.cs" />
     <Compile Include="Controllers\ProductAdminController.cs" />
     <Compile Include="Controllers\ProductController.cs" />
-    <Compile Include="Drivers\AdvertisePartDriver.cs" />
+    <Compile Include="Drivers\ProductPartDriver.cs" />
     <Compile Include="Extensions\UrlHelperExtensions.cs" />
     <Compile Include="Handlers\ProductPartHandler.cs" />
     <Compile Include="Migrations.cs" />
