@@ -18,12 +18,19 @@ namespace Orchard.Product {
                     .Column<string>("Review", column => column.Unlimited())
                     .Column<int>("SortID")
                 );
-            
+
             ContentDefinitionManager.AlterPartDefinition(typeof(ProductPart).Name, builder => {
                 builder.WithDescription("Product part for product of site.").WithField("Image",
                     fieldBuilder =>
                     fieldBuilder.OfType("MediaLibraryPickerField")
                     .WithDisplayName("Product image")
+                );
+                builder.WithField("Feature",
+                    fieldBuilder =>
+                    fieldBuilder.OfType("TextField")
+                    .WithDisplayName("Product Feature")
+                    .WithSetting("Flavor", "html")
+                    .WithSetting("Required", "true")
                 );
             });
 
@@ -46,16 +53,18 @@ namespace Orchard.Product {
                     fieldBuilder.OfType("MediaLibraryPickerField")
                     .WithDisplayName("Product image")
                 );
+                builder.WithField("Feature",
+                    fieldBuilder =>
+                    fieldBuilder.OfType("TextField")
+                    .WithDisplayName("Product Feature")
+                    .WithSetting("Flavor","html")
+                    .WithSetting("Required","true")
+                );
             });
 
-            ContentDefinitionManager.AlterTypeDefinition("Product",
-                cfg => cfg
-                    .WithIdentity()
-                    .WithPart("TitlePart")
-                   .WithPart(typeof(ProductPart).Name)
-                   .WithPart("LocalizationPart")
-                );
+          
             return 2;
         }
+
     }
 }

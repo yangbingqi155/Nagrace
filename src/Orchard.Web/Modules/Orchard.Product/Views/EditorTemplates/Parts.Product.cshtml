@@ -1,8 +1,21 @@
 ﻿@model Orchard.Product.Models.ProductPart
+@{
+    var shellDescriptor = WorkContext.Resolve<Orchard.Environment.Descriptor.Models.ShellDescriptor>();
+    Script.Require("OrchardTinyMce");
+    Script.Require("jQueryColorBox");
+    Style.Require("jQueryColorBox");
+}
+
+
+<script type="text/javascript">
+var mediaPickerEnabled = @(shellDescriptor.Features.Any(x => x.Name == "Orchard.MediaPicker") ? "true" : "false");
+var mediaLibraryEnabled = @(shellDescriptor.Features.Any(x => x.Name == "Orchard.MediaLibrary") ? "true" : "false");
+var language= @(shellDescriptor.Features.Any(x => x.Name == "Orchard.Location") ? "true" : "false");
+</script>
 
 <fieldset>
     <div class="editor-label">
-        @Html.LabelFor(model => model.PName, T(Html.DisplayNameFor(model => model.PName).ToHtmlString()))
+        ----@Html.LabelFor(model => model.PName, T(Html.DisplayNameFor(model => model.PName).ToHtmlString()))
     </div>
     <div class="editor-field">
         @Html.TextBoxFor(model => model.PName)
@@ -22,26 +35,21 @@
         @Html.TextBoxFor(model=>model.SortID)
         @Html.ValidationMessageFor(model=>model.SortID)
     </div>
-    @{
-        var htmlAttributes = new Dictionary<string, object>();
-        //    string editorFlavor = Model.EditorFlavor;
-
-        //    var htmlAttributes = new Dictionary<string, object> {
-        //    {"class", editorFlavor.HtmlClassify()}
-        //};
-
-        //    if (Model.Required == true) {
-        //        htmlAttributes["required"] = "required";
-        //    }
-
-        //    if (Model.AutoFocus == true) {
-        //        htmlAttributes["autofocus"] = "autofocus";
-        //    }
-
-        //    if (!String.IsNullOrEmpty(Model.Placeholder)) {
-        //        htmlAttributes["placeholder"] = Model.Placeholder;
-        //    }
-    }
-
-    @Html.TextArea("Feature", (string)Model.Feature, 25, 80, htmlAttributes)
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Feature, T(Html.DisplayNameFor(model => model.Feature).ToHtmlString()))
+    </div>
+    <div class="editor-field">
+        @{
+            var htmlAttributes = new Dictionary<string, object>();
+            htmlAttributes["class"] = "html tinymce";
+            htmlAttributes["required"] = "required";
+            htmlAttributes["autofocus"] = "autofocus";
+            htmlAttributes["placeholder"] = "";
+            htmlAttributes["mediaPickerEnabled"] = true;
+        }
+        
+        @Html.TextArea("Feature", (string)Model.Feature, 25, 80, htmlAttributes);
+        @Html.ValidationMessageFor(model => model.Feature)
+    </div>
+  
 </fieldset>
