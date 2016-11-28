@@ -2,8 +2,6 @@
 @{
     var shellDescriptor = WorkContext.Resolve<Orchard.Environment.Descriptor.Models.ShellDescriptor>();
     Script.Require("OrchardTinyMce");
-    Script.Require("jQueryColorBox");
-    Style.Require("jQueryColorBox");
 }
 
 
@@ -12,10 +10,15 @@ var mediaPickerEnabled = @(shellDescriptor.Features.Any(x => x.Name == "Orchard.
 var mediaLibraryEnabled = @(shellDescriptor.Features.Any(x => x.Name == "Orchard.MediaLibrary") ? "true" : "false");
 var language= @(shellDescriptor.Features.Any(x => x.Name == "Orchard.Location") ? "true" : "false");
 </script>
-
+<script type="text/javascript">
+  tinymce.init({
+      selector: '.tinymce',
+    inline: true
+  });
+</script>
 <fieldset>
     <div class="editor-label">
-        ----@Html.LabelFor(model => model.PName, T(Html.DisplayNameFor(model => model.PName).ToHtmlString()))
+        @Html.LabelFor(model => model.PName, T(Html.DisplayNameFor(model => model.PName).ToHtmlString()))
     </div>
     <div class="editor-field">
         @Html.TextBoxFor(model => model.PName)
@@ -48,7 +51,7 @@ var language= @(shellDescriptor.Features.Any(x => x.Name == "Orchard.Location") 
             htmlAttributes["mediaPickerEnabled"] = true;
         }
         
-        @Html.TextArea("Feature", (string)Model.Feature, 25, 80, htmlAttributes);
+        @Html.TextArea("Feature", (string)Model.Feature, 25, 80, htmlAttributes)
         @Html.ValidationMessageFor(model => model.Feature)
     </div>
   

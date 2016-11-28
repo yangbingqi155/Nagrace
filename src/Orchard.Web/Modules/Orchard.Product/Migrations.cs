@@ -29,8 +29,15 @@ namespace Orchard.Product {
                     fieldBuilder =>
                     fieldBuilder.OfType("TextField")
                     .WithDisplayName("Product Feature")
-                    .WithSetting("Flavor", "html")
-                    .WithSetting("Required", "true")
+                    .WithSetting("TextFieldSettings.Flavor", "html")
+                    .WithSetting("TextFieldSettings.Required", "true")
+                );
+                builder.WithField("Spec",
+                    fieldBuilder =>
+                    fieldBuilder.OfType("TextField")
+                    .WithDisplayName("Product Spec")
+                    .WithSetting("TextFieldSettings.Flavor", "html")
+                    .WithSetting("TextFieldSettings.Required", "true")
                 );
             });
 
@@ -57,8 +64,16 @@ namespace Orchard.Product {
                     fieldBuilder =>
                     fieldBuilder.OfType("TextField")
                     .WithDisplayName("Product Feature")
-                    .WithSetting("Flavor","html")
-                    .WithSetting("Required","true")
+                    .WithSetting("TextFieldSettings.Flavor", "html")
+                    .WithSetting("TextFieldSettings.Required", "true")
+                );
+
+                builder.WithField("Spec",
+                    fieldBuilder =>
+                    fieldBuilder.OfType("TextField")
+                    .WithDisplayName("Product Spec")
+                    .WithSetting("TextFieldSettings.Flavor", "html")
+                    .WithSetting("TextFieldSettings.Required", "true")
                 );
             });
 
