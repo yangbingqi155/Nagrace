@@ -18,6 +18,7 @@
     Style.Require("Bootstrap");
     Style.Require("Animate");
     Style.Require("SiteHome");
+    Style.Require("SiteProductDetail");
 
     Script.Require("Bootstrap");
     Script.Require("Animate");
@@ -63,6 +64,10 @@
     Model.Id = "layout-wrapper";
     var tag = Tag(Model, "div"); // using Tag so the layout div gets the classes, id and other attributes added to the Model
 }
+<!--[if lt IE 9]>
+    @Script.Require("Respond");
+<![endif]-->
+
 @tag.StartElement
 @if (Model.Header != null) {
 <header id="layout-header" class="group">

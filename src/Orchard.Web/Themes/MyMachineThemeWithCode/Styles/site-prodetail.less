@@ -1,0 +1,24 @@
+﻿@min_width:960px;
+
+/*
+    产品详细页面公用
+*/
+.img_fullscreen
+{
+    width:100%;
+    min-width:@min_width;
+}
+.bg_container{
+    position:relative;
+}
+
+.on_container(@top,@left){
+    position:absolute;
+    top:@top;
+    left:@left;
+}
+
+.main_p_img_sub_img{
+    .on_container(44%,55%);
+}
+
