@@ -21,10 +21,9 @@
     Style.Require("SiteProductDetail");
 
     Script.Require("Bootstrap");
-    Script.Require("Animate");
     Script.Require("Less");
     Script.Require("Nav");
-
+    //Script.Require("Animate");
     /* Some useful shortcuts or settings
     ***************************************************************/
 
@@ -34,19 +33,19 @@
     ***************************************************************/
 
     //Add classes to the wrapper div to toggle aside widget zones on and off
-    var asideClass = CalcuClassify(new [] {"AsideFirst", "AsideSecond"}, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
+    var asideClass = CalcuClassify(new[] { "AsideFirst", "AsideSecond" }, "aside-"); // for aside-1, aside-2 or aside-12 if any of the aside zones are filled
     if (HasText(asideClass)) {
         Model.Classes.Add(asideClass);
     }
 
     //Add classes to the wrapper div to toggle tripel widget zones on and off
-    var tripelClass = CalcuClassify(new [] {"TripelFirst", "TripelSecond", "TripelThird"}, "tripel-"); // for tripel-1, triple-2, etc. if any of the tripel zones are filled
+    var tripelClass = CalcuClassify(new[] { "TripelFirst", "TripelSecond", "TripelThird" }, "tripel-"); // for tripel-1, triple-2, etc. if any of the tripel zones are filled
     if (HasText(tripelClass)) {
         Model.Classes.Add(tripelClass);
     }
 
     //Add classes to the wrapper div to toggle quad widget zones on and off
-    var footerQuadClass = CalcuClassify(new [] {"FooterQuadFirst", "FooterQuadSecond", "FooterQuadThird", "FooterQuadFourth"}, "split-"); // for quad-1, quad-2, etc. if any of the quad zones are filled
+    var footerQuadClass = CalcuClassify(new[] { "FooterQuadFirst", "FooterQuadSecond", "FooterQuadThird", "FooterQuadFourth" }, "split-"); // for quad-1, quad-2, etc. if any of the quad zones are filled
     if (HasText(footerQuadClass)) {
         Model.Classes.Add(footerQuadClass);
     }
@@ -54,9 +53,9 @@
     /* Inserting some ad hoc shapes
     ***************************************************************/
     WorkContext.Layout.Navigation.Add(New.Branding(), "1"); // Site name and link to the home page
-    //WorkContext.Layout.Header.Add(New.LanguagePad(), "1");
+                                                            //WorkContext.Layout.Header.Add(New.LanguagePad(), "1");
     WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
-    //WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
+                                                            //WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
 
     /* Last bit of code to prep the layout wrapper
     ***************************************************************/
@@ -69,6 +68,7 @@
 <![endif]-->
 
 @tag.StartElement
+
 @if (Model.Header != null) {
 <header id="layout-header" class="group">
     <div id="header">
