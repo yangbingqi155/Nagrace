@@ -1,17 +1,25 @@
 ﻿@min_width:960px;
 @center_width:960px;
-@main_p_img_left:75%; 
-
+@fullscreen_width:100%;
+@main_p_img_sub_left:75%; 
+@main_p_img_sub_hdmi_left:25%; 
+@color_blue:#52aed7;
 /*
     产品详细页面公用
 */
+.center_width{
+    width:@center_width;
+}
+.fullscreen_width{
+    width:@fullscreen_width;
+}
 .img_fullscreen
 {
-   
+ width:@fullscreen_width;  
+ overflow:hidden;
 }
 .bg_container{
     position:relative;
-    width:@center_width;
     margin:0 auto;
     z-index:100;
 }
@@ -22,7 +30,7 @@
     left:@left;
 }
 .main_p_img_title_1{
-    .on_container(16%,@main_p_img_left);
+    .on_container(16%,@main_p_img_sub_left);
 }
 .main_p_img_title_1 span{
     font-size:18px;
@@ -30,7 +38,7 @@
 }
 
 .main_p_img_title_1 span.blue{
-    color:#52aed7;
+    color:@color_blue;
 }
 
 .main_p_img_title_1 span.morebold{
@@ -38,7 +46,7 @@
 }
 
 .main_p_img_title_2{
-    .on_container(20%,@main_p_img_left);
+    .on_container(20%,@main_p_img_sub_left);
     width:550px;
 }
 .main_p_img_title_2 span{
@@ -48,7 +56,7 @@
 
 .main_p_img_sub
 {
-    .on_container(30%,@main_p_img_left);
+    .on_container(30%,@main_p_img_sub_left);
     z-index:1000;
 }
 
@@ -67,5 +75,58 @@
     line-height:88px;
 }
 
+.bg_hdmi_container{
+    .on_container(0,0);
+    z-index:1000;
+    width:@fullscreen_width;
+}
 
+.main_p_bg_hdmi
+{
+    width:@fullscreen_width;
+    height:720px;
+    background-image:url("../../../Media/Default/Products/NT-V6/bg/bg_04.jpg")
+}
+.main_p_img_sub_hdmi
+{
+    width:1120px;
+    margin:0 auto;
+}
 
+.main_p_img_sub_hdmi .top
+{
+    text-align:center;
+    font-size:18px;
+    font-weight:bold;
+}
+.main_p_img_sub_hdmi .left
+{
+    width:800px;
+    float:left;
+}
+.main_p_img_sub_hdmi .left .title
+{
+    float:right;
+    margin-right:25px;
+    color:@color_blue;
+}
+.main_p_img_sub_hdmi .left .item
+{
+    
+}
+
+.main_p_img_sub_hdmi .right
+{
+    width:300px;
+    float:left;
+}
+
+.main_p_img_sub_hdmi .right .title
+{
+   color:@color_blue;
+}
+
+.main_p_img_sub_hdmi .right .item
+{
+    margin-top:10px;
+}

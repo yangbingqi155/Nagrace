@@ -126,6 +126,7 @@
     <Content Include="Scripts\Respond\respond.src.js" />
     <Content Include="Scripts\Wow\wow.js" />
     <Content Include="Scripts\Wow\wow.min.js" />
+    <Content Include="Scripts\Wow\Wowinit.js" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.woff" />

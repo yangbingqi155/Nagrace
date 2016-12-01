@@ -14,6 +14,7 @@ namespace MyMachineThemeWithCode {
             manifest.DefineScript("Less").SetUrl("CssLess/less.min.js", "CssLess/less.js");
             manifest.DefineScript("Nav").SetUrl("Nav.js").SetDependencies("jQuery");
             manifest.DefineScript("Animate").SetUrl("Wow/wow.min.js", "Wow/wow.js");
+            manifest.DefineScript("Wowinit").SetUrl("Wow/Wowinit.js").SetDependencies("Animate");
             //manifest.DefineScript("HTML5shiv").SetUrl("html5shiv/html5shiv.min.js", "html5shiv/html5shiv.js");
             manifest.DefineScript("Respond").SetUrl("Respond/respond.min.js", "Respond/respond.src.js");
 
@@ -35,7 +36,7 @@ namespace MyMachineThemeWithCode {
             manifest.DefineStyle("SiteProductDetail").SetUrl("site-prodetail.less").SetAttribute("rel", "stylesheet/less");
 
             //Wow animate
-            manifest.DefineStyle("Animate").SetUrl("Wow/animate.css").SetAttribute("rel", "stylesheet/css");
+            manifest.DefineStyle("Animate").SetUrl("Wow/animate.css").SetAttribute("rel", "stylesheet");
         }
     }
 }
