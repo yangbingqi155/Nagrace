@@ -3,6 +3,7 @@
 @fullscreen_width:100%;
 @main_p_img_sub_left:75%; 
 @main_p_img_sub_hdmi_left:25%; 
+@icon_more_width:1234px;
 @color_blue:#52aed7;
 /*
     产品详细页面公用
@@ -85,7 +86,8 @@
 {
     width:@fullscreen_width;
     height:720px;
-    background-image:url("../../../Media/Default/Products/NT-V6/bg/bg_04.jpg")
+    background:100%;
+    background-image:url("../../../Media/Default/Products/NT-V6/bg/bg_04.jpg");
 }
 .main_p_img_sub_hdmi
 {
@@ -96,18 +98,21 @@
 .main_p_img_sub_hdmi .top
 {
     text-align:center;
-    font-size:18px;
+    font-size:24px;
     font-weight:bold;
+    margin-top:20px;
 }
 .main_p_img_sub_hdmi .left
 {
     width:800px;
     float:left;
+    margin-top:70px;
 }
 .main_p_img_sub_hdmi .left .title
 {
     float:right;
     margin-right:25px;
+    margin-bottom:10px;
     color:@color_blue;
 }
 .main_p_img_sub_hdmi .left .item
@@ -119,14 +124,117 @@
 {
     width:300px;
     float:left;
+    margin-left:20px;
 }
 
 .main_p_img_sub_hdmi .right .title
 {
    color:@color_blue;
+   text-align:center;
+   font-weight:bold;
 }
 
 .main_p_img_sub_hdmi .right .item
 {
     margin-top:10px;
+}
+
+.icon_more
+{
+    width:@icon_more_width;
+}
+
+.main_p_img_sub_robots_bg{
+    width:596px;
+    margin-top:200px;
+}
+
+.main_p_img_sub_robots
+{
+    .on_container(-180px,-400px);
+    z-index:1000;
+    width:1370px;
+    margin:0 auto;
+    
+}
+
+.main_p_img_sub_robots .left
+{
+    float:left;
+    width:582px;
+}
+.main_p_img_sub_robots .center
+{
+    float:left;
+    width:236px;
+    margin-top:55px;
+}
+.main_p_img_sub_robots .right
+{
+    float:left;
+    width:544px;
+}
+
+.main_p_img_sub_memory{
+    width:@center_width;
+    margin:50px auto;
+}
+.main_p_img_sub_memory .top{
+     text-align:center;
+     font-size:20px;
+    font-weight:bold;
+    margin-bottom:40px;
+}
+.main_p_img_sub_memory .item{
+    float:left;
+}
+.main_p_img_sub_memory .item .title{
+    text-align:center;
+    font-size:20px;
+    font-weight:900;
+    margin-bottom:20px;
+}
+.main_p_img_sub_memory .left{
+    width:422px;
+}
+.main_p_img_sub_memory .right{
+    width:406px;
+    margin-left:130px;
+}
+
+.main_p_bg_games
+{
+    width:@fullscreen_width;
+    height:1332px;
+    background:100%;
+    background-image:url("../../../Media/Default/Products/NT-V6/bg/bg_10.png");
+}
+.main_p_img_sub_games
+{
+    margin:0 auto;
+    .on_container(0,0);
+    z-index:1000;
+    width:@fullscreen_width;
+}
+
+.main_p_img_sub_games .title
+{
+    font-size:24px;
+    font-weight:900;
+    text-align:center;
+    padding-top:10px;
+}
+.main_p_img_sub_games .item img{
+    width:@fullscreen_width;
+}
+
+.main_p_img_sub_games .top
+{
+    margin-top:0px;
+    width:@fullscreen_width;
+}
+.main_p_img_sub_games .bottom
+{
+    margin-top:10px;
+    width:@fullscreen_width;
 }
