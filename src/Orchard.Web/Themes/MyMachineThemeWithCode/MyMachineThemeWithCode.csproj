@@ -220,6 +220,7 @@
     <Content Include="Views\LanguagePad.cshtml" />
     <Content Include="Views\BadgeOfHonor.cshtml" />
     <Content Include="Views\Parts\Localization.ContentTranslations.cshtml" />
+    <Content Include="Styles\site-prodetail.less" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">

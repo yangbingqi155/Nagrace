@@ -1,0 +1,71 @@
+﻿@min_width:960px;
+@center_width:960px;
+@main_p_img_left:75%; 
+
+/*
+    产品详细页面公用
+*/
+.img_fullscreen
+{
+   
+}
+.bg_container{
+    position:relative;
+    width:@center_width;
+    margin:0 auto;
+    z-index:100;
+}
+
+.on_container(@top,@left){
+    position:absolute;
+    top:@top;
+    left:@left;
+}
+.main_p_img_title_1{
+    .on_container(16%,@main_p_img_left);
+}
+.main_p_img_title_1 span{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.main_p_img_title_1 span.blue{
+    color:#52aed7;
+}
+
+.main_p_img_title_1 span.morebold{
+     font-weight:900;
+}
+
+.main_p_img_title_2{
+    .on_container(20%,@main_p_img_left);
+    width:550px;
+}
+.main_p_img_title_2 span{
+    font-size:14px;
+
+}
+
+.main_p_img_sub
+{
+    .on_container(30%,@main_p_img_left);
+    z-index:1000;
+}
+
+.main_p_img_sub .item
+{
+    margin-top:10px;
+    height:88px;
+    width:260px;
+}
+
+.main_p_img_sub .item .img{
+    float:left;
+}
+.main_p_img_sub .item .title{
+    float:left;
+    line-height:88px;
+}
+
+
+
