@@ -158,6 +158,7 @@ $RECYCLE.BIN/
 
 #App_Data/
 App_Data/Dependencies/
+App_Data/Sites/Default/Indexes
 glob:*.user
 *.patch
 *.hg
