@@ -1,385 +1,510 @@
-﻿@min_width:960px;
-@center_width:960px;
-@fullscreen_width:100%;
-@main_p_img_sub_left:75%; 
-@main_p_img_sub_hdmi_left:25%; 
-@icon_more_width:1234px;
-@color_blue:#52aed7;
+﻿@min_width: 1024px;
+@max_width: 1920px;
+@center_width: 960px;
+@fullscreen_width: 100%;
+@main_p_img_sub_left: 75%;
+@main_p_img_sub_hdmi_left: 25%;
+@icon_more_width: 1234px;
+@color_blue: #52aed7;
 /*
     产品详细页面公用
 */
-.center_width{
-    width:@center_width;
-}
-.fullscreen_width{
-    width:@fullscreen_width;
-}
-.img_fullscreen
-{
- width:@fullscreen_width;  
- overflow:hidden;
-}
-.bg_container{
-    position:relative;
-    margin:0 auto;
-    z-index:100;
+
+.p_desc {
+    max-width: 1920px;
+    min-width: @min_width;
 }
 
-.on_container(@top,@left){
-    position:absolute;
-    top:@top;
-    left:@left;
-}
-.main_p_img_title_1{
-    .on_container(16%,@main_p_img_sub_left);
-}
-.main_p_img_title_1 span{
-    font-size:18px;
-    font-weight:bold;
+.center_width {
+    width: @center_width;
 }
 
-.main_p_img_title_1 span.blue{
-    color:@color_blue;
+.fullscreen_width {
+    width: @fullscreen_width;
 }
 
-.main_p_img_title_1 span.morebold{
-     font-weight:900;
+.img_fullscreen {
+    width: @fullscreen_width;
+    overflow: hidden;
 }
 
-.main_p_img_title_2{
-    .on_container(20%,@main_p_img_sub_left);
-    width:550px;
-}
-.main_p_img_title_2 span{
-    font-size:14px;
-
-}
-
-.main_p_img_sub
-{
-    .on_container(30%,@main_p_img_sub_left);
-    z-index:1000;
+.bg_container {
+    position: relative;
+    margin: 0 auto;
+    z-index: 100;
+    width: 100%;
+    min-width: @min_width;
+    max-width: @max_width;
 }
 
-.main_p_img_sub .item
-{
-    margin-top:10px;
-    height:88px;
-    width:260px;
+.on_container(@top,@left) {
+    position: absolute;
+    top: @top;
+    left: @left;
 }
 
-.main_p_img_sub .item .img{
-    float:left;
-}
-.main_p_img_sub .item .title{
-    float:left;
-    line-height:88px;
+.main_p_img_sub {
+    margin: 0 auto;
+    width: 57.29%;
+
+    .left {
+        width: 59.09%;
+        float: left;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .right {
+        float: left;
+        width: 31.81%;
+        margin-top: 11%;
+        margin-left: 9.09%;
+
+        .title {
+            span {
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+            span.blue {
+                color: @color_blue;
+            }
+
+            span.morebold {
+                font-weight: 900;
+            }
+        }
+
+        .sub_title {
+            margin-top: 5%;
+            margin-bottom: 15%;
+
+            span {
+                font-size: 14px;
+            }
+        }
+
+        .item {
+            text-align: left;
+            width: 100%;
+
+            .img {
+                width: 40.85%;
+                float: left;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .title {
+                width: 59.14%;
+                float: left;
+                padding-top: 9%;
+            }
+        }
+    }
 }
 
-.bg_hdmi_container{
+
+.bg_hdmi_container {
+    .on_container(5%,20%);
+    z-index: 1000;
+    width: 61.5%;
+    /*margin-left:20%;*/
+}
+
+
+.main_p_img_sub_hdmi {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.bg_hdmi_container_top {
+    .on_container(4%,0%);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.main_p_img_sub_hdmi_bgimg {
+    width: 100%;
+}
+
+.main_p_img_sub_hdmi .left {
+    width: 65.30%;
+    float: left;
+    margin-top: 8%;
+}
+
+.main_p_img_sub_hdmi .left .title {
+    float: right;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    color: @color_blue;
+}
+
+.main_p_img_sub_hdmi .left .item img {
+    width: @fullscreen_width;
+}
+
+.main_p_img_sub_hdmi .right {
+    width: 24.50%;
+    float: left;
+    margin-left: 9.5%;
+}
+
+.main_p_img_sub_hdmi .right .title {
+    color: @color_blue;
+    text-align: center;
+    font-weight: bold;
+}
+
+.main_p_img_sub_hdmi .right .item {
+    margin-top: 10px;
+}
+
+.main_p_img_sub_hdmi .right .item img {
+    width: 100%;
+}
+
+.icon_more {
+    width: @fullscreen_width;
+}
+
+.icon_more img {
+    width: @fullscreen_width;
+}
+
+.main_p_img_sub_cpu {
+    .on_container(100px,270px);
+    z-index: 1000;
+    margin: 0 auto;
+}
+
+.main_p_img_sub_cpu_bgimg {
+    width: 100%;
+}
+
+.main_p_img_sub_cpu .item {
+    float: left;
+}
+
+.main_p_img_sub_robots_bg {
+    margin-top: 200px;
+    max-width: 1362px;
+}
+
+.main_p_img_sub_robots_bgimg {
+    width: 52.45%;
+    max-width: 596px;
+    display: block;
+    margin: 0 auto;
+}
+
+.main_p_img_sub_robots {
+    .on_container(-45%,0);
+    z-index: 1000;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main_p_img_sub_robots .item {
+    float: left;
+
+    img {
+        width: 100%;
+    }
+}
+
+.main_p_img_sub_robots .left {
+    width: 42.7%;
+}
+
+.main_p_img_sub_robots .center {
+    width: 17.30%;
+    margin-top: 5%;
+}
+
+.main_p_img_sub_robots .right {
+    width: 39.90%;
+}
+
+.main_p_img_sub_cpudetail_bg {
+    width: @fullscreen_width;
+    margin: 0 auto;
+}
+
+.main_p_img_sub_cpudetail_bgimg {
+    width: 100%;
+}
+
+.main_p_img_sub_memory {
+    width: 54.94%;
+    margin: 50px auto;
+
+    .top {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+
+    .left {
+        width: 40%;
+    }
+
+    .right {
+        width: 40%;
+        margin-left: 20%;
+    }
+
+    .item {
+        float: left;
+
+        .title {
+            text-align: center;
+            font-size: 20px;
+            font-weight: 900;
+            margin-bottom: 20px;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.main_p_img_sub_games {
+    margin: 0 auto;
     .on_container(0,0);
-    z-index:1000;
-    width:@fullscreen_width;
+    z-index: 1000;
+    width: @fullscreen_width;
 }
 
-.main_p_bg_hdmi
-{
-    width:@fullscreen_width;
-    height:720px;
-    background:100%;
-    background-image:url("../../../Media/Default/Products/NT-V6/bg/bg_04.jpg");
-}
-.main_p_img_sub_hdmi
-{
-    width:1120px;
-    margin:0 auto;
+.main_p_img_sub_games_bgimg {
+    width: 100%;
+    height: 100%;
 }
 
-.main_p_img_sub_hdmi .top
-{
-    text-align:center;
-    font-size:24px;
-    font-weight:bold;
-    margin-top:20px;
-}
-.main_p_img_sub_hdmi .left
-{
-    width:800px;
-    float:left;
-    margin-top:70px;
-}
-.main_p_img_sub_hdmi .left .title
-{
-    float:right;
-    margin-right:25px;
-    margin-bottom:10px;
-    color:@color_blue;
-}
-.main_p_img_sub_hdmi .left .item
-{
-    
+.main_p_img_sub_games .title {
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    padding-top: 10px;
 }
 
-.main_p_img_sub_hdmi .right
-{
-    width:300px;
-    float:left;
-    margin-left:20px;
+.main_p_img_sub_games .item img {
+    width: @fullscreen_width;
 }
 
-.main_p_img_sub_hdmi .right .title
-{
-   color:@color_blue;
-   text-align:center;
-   font-weight:bold;
+.main_p_img_sub_games .top {
+    margin-top: 0px;
+    width: @fullscreen_width;
 }
 
-.main_p_img_sub_hdmi .right .item
-{
-    margin-top:10px;
+.main_p_img_sub_games .bottom {
+    margin-top: -84px;
+    width: @fullscreen_width;
 }
 
-.icon_more
-{
-    width:@icon_more_width;
+.main_p_img_sub_signage_top {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
 }
 
-.main_p_img_sub_robots_bg{
-    width:596px;
-    margin-top:200px;
+.main_p_img_sub_signage_top .title {
+    font-size: 28px;
+    color: @color_blue;
+    font-weight: 900;
 }
 
-.main_p_img_sub_robots
-{
-    .on_container(-180px,-400px);
-    z-index:1000;
-    width:1370px;
-    margin:0 auto;
-    
-}
-
-.main_p_img_sub_robots .left
-{
-    float:left;
-    width:582px;
-}
-.main_p_img_sub_robots .center
-{
-    float:left;
-    width:236px;
-    margin-top:55px;
-}
-.main_p_img_sub_robots .right
-{
-    float:left;
-    width:544px;
-}
-
-.main_p_img_sub_memory{
-    width:@center_width;
-    margin:50px auto;
-}
-.main_p_img_sub_memory .top{
-     text-align:center;
-     font-size:20px;
-    font-weight:bold;
-    margin-bottom:40px;
-}
-.main_p_img_sub_memory .item{
-    float:left;
-}
-.main_p_img_sub_memory .item .title{
-    text-align:center;
-    font-size:20px;
-    font-weight:900;
-    margin-bottom:20px;
-}
-.main_p_img_sub_memory .left{
-    width:422px;
-}
-.main_p_img_sub_memory .right{
-    width:406px;
-    margin-left:130px;
-}
-
-.main_p_bg_games
-{
-    width:@fullscreen_width;
-    height:1332px;
-    background:100%;
-    background-image:url("../../../Media/Default/Products/NT-V6/bg/bg_10.png");
-}
-.main_p_img_sub_games
-{
-    margin:0 auto;
-    .on_container(0,0);
-    z-index:1000;
-    width:@fullscreen_width;
-}
-
-.main_p_img_sub_games .title
-{
-    font-size:24px;
-    font-weight:900;
-    text-align:center;
-    padding-top:10px;
-}
-.main_p_img_sub_games .item img{
-    width:@fullscreen_width;
-}
-
-.main_p_img_sub_games .top
-{
-    margin-top:0px;
-    width:@fullscreen_width;
-}
-.main_p_img_sub_games .bottom
-{
-    margin-top:10px;
-    width:@fullscreen_width;
-}
-
-.main_p_img_sub_signage_top
-{
-    text-align:center;
-    margin-top:60px;
-     margin-bottom:40px;
-}
-.main_p_img_sub_signage_top .title{
-    font-size:28px;
-    color:@color_blue;
-    font-weight:900;
-}
-
-.main_p_img_sub_signage_top .sub_title{
-    font-size:24px;
-    font-weight:bold;
-    margin-top:20px;
+.main_p_img_sub_signage_top .sub_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 
-.bg_signage_container
-{
-    width:1400px;
-    margin:0 auto;
-    position:relative;
-    z-index:100;
-}
-.main_p_img_sub_signage
-{
-    .on_container(50px,896px);
-    z-index:1000;
-}
-.main_p_img_sub_signage .top
-{
-    
-}
-.main_p_img_sub_signage .bottom
-{
-    
-}
-.main_p_img_sub_signage .item .title
-{
-    color:@color_blue;
-    text-align:center;
-    font-size:18px;
+.bg_signage_container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
 }
 
-.main_p_img_sub_rotation
-{
-    margin:50px auto;
-    width:1280px
-}
-.main_p_img_sub_rotation .item
-{
-    float:left;
-}
-.main_p_img_sub_rotation .left
-{
-    text-align:center;
-
-}
-.main_p_img_sub_rotation .left .title
-{
-     font-size:28px;
-    color:@color_blue;
-    font-weight:900;
-}
-.main_p_img_sub_rotation .left .sub_title
-{
-     font-size:24px;
-    font-weight:bold;
-    margin-top:10px;
-    margin-bottom:10px;
-}
-.main_p_img_sub_rotation .center
-{
-    margin-left:20px;
-    margin-top:300px;
+.bg_signage_container_bgimg {
+    width: 65.60%;
+    margin-left: 2%;
 }
 
-.main_p_img_sub_rotation .right
-{
-   margin-left:0px;
+.main_p_img_sub_signage {
+    .on_container(8%,64%);
+    z-index: 1000;
+    width: 34.3%;
 }
 
-.main_p_img_sub_assistant_top
-{
-    text-align:center;
-}
-.main_p_img_sub_assistant_top .title{
-     font-size:28px;
-    color:@color_blue;
-    font-weight:900;
-}
-.main_p_img_sub_assistant_top .sub_title{
-    font-size:22px;
-}
-.main_p_img_sub_assistant_bg
-{
-    margin:0 auto;
-    position:relative;
-    z-index:100;
-    margin-top:100px;
-    width:1625px;
-}
-.main_p_img_sub_assistant_bg .item
-{
-    float:left;
+.main_p_img_sub_signage .top {
 }
 
-.main_p_img_sub_assistant_bg .sepearte
-{
-    margin-left:328px;
+.main_p_img_sub_signage .bottom {
 }
 
-.main_p_img_sub_assistant{
-    .on_container(-90px,615px);
-     z-index:1000;
+.main_p_img_sub_signage .item .title {
+    color: @color_blue;
+    text-align: center;
+    font-size: 18px;
 }
-.bg_wifi_container
-{
+
+.main_p_img_sub_signage .item img {
+    width: 100%;
+}
+
+.main_p_img_sub_rotation {
+    margin: 50px auto;
+    width: 70.72%;
+}
+
+.main_p_img_sub_rotation .item {
+    float: left;
+    height: 100%;
+
+    img {
+        width: 100%;
+    }
+}
+
+
+.main_p_img_sub_rotation .left {
+    text-align: center;
+    width: 48.30%;
+
+    img {
+        max-width: 656px;
+    }
+
+    .title {
+        font-size: 28px;
+        color: @color_blue;
+        font-weight: 900;
+    }
+
+    .sub_title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+.main_p_img_sub_rotation .center {
+    img {
+        max-width: 61px;
+    }
+
+    margin-left: 4.49%;
+    margin-top: 22%;
+    width: 4.49%;
+}
+
+.main_p_img_sub_rotation .right {
+    margin-left: 4.49%;
+    width: 38.21%;
+
+    img {
+        max-width: 519px;
+    }
+}
+
+.main_p_img_sub_assistant_top {
+    text-align: center;
+
+    .title {
+        font-size: 28px;
+        color: @color_blue;
+        font-weight: 900;
+    }
+
+    .sub_title {
+        font-size: 22px;
+    }
+}
+
+.main_p_img_sub_assistant_bg {
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+    margin-top: 100px;
+    width:87.39%;
+}
+
+.main_p_img_sub_assistant_bg .item {
+    float: left;
+    width: 19.30%;
+}
+
+.main_p_img_sub_assistant_bg .item img {
+    width: 100%;
+}
+
+.main_p_img_sub_assistant_bg .sepearte {
+    margin-left: 20.50%;
+}
+
+.main_p_img_sub_assistant {
+    .on_container(-17%,37%);
+    z-index: 1000;
+    width: 23.80%;
+}
+
+.main_p_img_sub_assistant img {
+    width: 100%;
+}
+
+.bg_wifi_container {
     .bg_container;
-    width:1200px;
     margin-top: 150px;
+    width: 70.30%;
 }
-.bg_wifi_container_bgcolor
-{
-    background-color:#E3E3E3;
-    width:@fullscreen_width;
-    height:687px;
+
+.bg_wifi_container_bgcolor {
+    background-color: #E3E3E3;
+    width: @fullscreen_width;
+    padding-bottom: 1.5%;
 }
-.main_p_img_sub_wifi
-{
-    .on_container(60px,810px);
-    z-index:1000;
+
+.bg_wifi_container_bgimg {
+    width: 60.85%;
+    max-width: 822px;
 }
-.main_p_img_sub_wifi .top
-{
-    margin-left:10px;
+
+.main_p_img_sub_wifi {
+    .on_container(8%,52.85%);
+    z-index: 1000;
+    width: 39.10%;
 }
-.main_p_img_sub_wifi .bottom
-{
-    margin-top:10px;
-    margin-left:-200px;
+
+.main_p_img_sub_wifi .top {
+    margin-left: 22%;
+    width: 59.65%;
+}
+
+.main_p_img_sub_wifi .top img {
+    width: 59.65%;
+    max-width: 315px;
+}
+
+.main_p_img_sub_wifi .bottom {
+    width: 100%;
+    margin-top: 0;
+    margin-left: -10%;
+}
+
+.main_p_img_sub_wifi .bottom img {
+    width: 100%;
+    max-width: 528px;
 }
