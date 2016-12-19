@@ -24,19 +24,19 @@ namespace Orchard.Comments.Drivers {
         protected override DriverResult Display(RecentCommentsPart part,string displayType,dynamic shapeHelper) {
             return ContentShape("Parts_RecentComments",()=> {
 
-                var blog = _contentManager.Get<BlogPart>(part.ContainerID);
-
-                if (blog == null) {
-                    return null;
-                }
+                //var blog = _contentManager.Get<BlogPart>(part.ContainerID);
+                //if (blog == null) {
+                //    msg = "blog";
+                //    return null;
+                //}
                 // create a hierarchy of shapes
                 var firstLevelShapes = new List<dynamic>();
                 var allShapes = new Dictionary<int, dynamic>();
 
                 var comments = _contentManager.Query<CommentPart, CommentPartRecord>()
-                .Where(en=>en.Status== CommentStatus.Approved)
+                .Where(en=>en.Status== CommentStatus.Approved&&en.CommentedOnContainer== part.ContainerID)
                 .Join<CommonPartRecord>()
-                .Where(cr=>cr.Container.Id==part.ContainerID)
+                //.Where(cr=>cr.Container.Id==part.ContainerID)
                  .OrderByDescending(cr => cr.CreatedUtc)
                     .Slice(0, part.Count)
                     .Select(ci => ci.As<CommentPart>())
@@ -50,7 +50,8 @@ namespace Orchard.Comments.Drivers {
                 //    .ToList();
 
                 foreach (var item in comments) {
-                    var shape = shapeHelper.Parts_Comment(ContentPart: item, ContentItem: item.ContentItem);
+                    var blogPost=_contentManager.Get(item.CommentedOn);
+                    var shape = shapeHelper.Parts_Comment(ContentPart: item, ContentItem: item.ContentItem, blogPost: blogPost);
                     allShapes.Add(item.Id, shape);
                 }
 
@@ -65,10 +66,11 @@ namespace Orchard.Comments.Drivers {
                 }
 
                 var list = shapeHelper.List(Items: firstLevelShapes);
-
+                part.Count = 6;
                 return shapeHelper.Parts_RecentComments(
                     List: list,
-                    CommentCount: part.Count);
+                    CommentCount: part.Count
+                    );
 
             });
         }

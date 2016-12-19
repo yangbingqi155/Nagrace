@@ -22,7 +22,7 @@
     <ExtensionId>MyMachineThemeWithCode</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Themes/MyMachineThemeWithCode/MyMachineThemeWithCode.csproj</VirtualPath>
-    <Hash>fc96a98a2e424c83</Hash>
+    <Hash>dfe4a3f129f20d59</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Advertise</ExtensionId>
@@ -76,7 +76,7 @@
     <ExtensionId>Orchard.Blogs</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Modules/Orchard.Blogs/bin/Orchard.Blogs.dll</VirtualPath>
-    <Hash>958a51988c2700ad</Hash>
+    <Hash>958a6110cb26ebd2</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Caching</ExtensionId>
@@ -92,9 +92,9 @@
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Comments</ExtensionId>
-    <LoaderName>PrecompiledExtensionLoader</LoaderName>
-    <VirtualPath>~/Modules/Orchard.Comments/bin/Orchard.Comments.dll</VirtualPath>
-    <Hash>7198cc682106c832</Hash>
+    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Orchard.Comments/Orchard.Comments.csproj</VirtualPath>
+    <Hash>90c3fff34274ed65</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Conditions</ExtensionId>
@@ -430,7 +430,7 @@
     <ExtensionId>PJS.Bootstrap</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Themes/PJS.Bootstrap/PJS.Bootstrap.csproj</VirtualPath>
-    <Hash>f655b026123c5bca</Hash>
+    <Hash>f6486f237c91faae</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SysCache</ExtensionId>

@@ -8,7 +8,7 @@
     <p>@T("No posts.")</p>
 }
 else {
-    <div>
+    <div class="list_header">
         RECENT POSTS
     </div>
     <ul class="recent-posts">
@@ -20,7 +20,7 @@ else {
             <li>
                 <h5>
                     @Html.ItemDisplayLink(title, contentItem)<br />
-                    <small>@T("Posted") @date.ToShortDateString()</small>
+                    @*<small>@T("Posted") @date.ToShortDateString()</small>*@
                 </h5>
             </li>
         }

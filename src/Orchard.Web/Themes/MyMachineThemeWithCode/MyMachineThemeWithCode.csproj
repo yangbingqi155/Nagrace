@@ -205,6 +205,7 @@
     <Content Include="App_Data\Localization\zh-CN\orchard.theme.po" />
     <None Include="Styles\default-grid.less" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Views\Layout-url-category-blog-post-category.cshtml" />
     <None Include="Styles\site-home.less" />
     <Content Include="Styles\Wow\animate.css" />
     <Content Include="ThemeZonePreview.png" />
@@ -222,6 +223,10 @@
     <Content Include="Views\BadgeOfHonor.cshtml" />
     <Content Include="Views\Parts\Localization.ContentTranslations.cshtml" />
     <Content Include="Styles\site-prodetail.less" />
+    <Content Include="Views\Layout-url-our-blog.cshtml" />
+    <Content Include="Views\Parts\RecentCommentst.cshtml" />
+    <Content Include="Views\Parts\Comment-url-our-blog.cshtml" />
+    <Content Include="Views\Parts\Comment-url-category-blog-post-category.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
@@ -233,6 +238,10 @@
       <Project>{9916839C-39FC-4CEB-A5AF-89CA7E87119F}</Project>
       <Name>Orchard.Core</Name>
       <Private>false</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Modules\Orchard.Comments\Orchard.Comments.csproj">
+      <Project>{14c049fd-b35b-415a-a824-87f26b26e7fd}</Project>
+      <Name>Orchard.Comments</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Modules\Orchard.Localization\Orchard.Localization.csproj">
       <Project>{fbc8b571-ed50-49d8-8d9d-64ab7454a0d6}</Project>
