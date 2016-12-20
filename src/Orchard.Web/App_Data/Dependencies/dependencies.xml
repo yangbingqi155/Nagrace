@@ -100,13 +100,33 @@
   </Dependency>
   <Dependency>
     <ModuleName>Magelia.WebStore</ModuleName>
-    <VirtualPath>~/Modules/Magelia.WebStore/Magelia.WebStore.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Magelia.WebStore/bin/Magelia.WebStore.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
+      <Reference>
+        <Name>Magelia.WebStore.Client</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Magelia.WebStore/bin/Magelia.WebStore.Client.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Forms</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Forms/bin/Orchard.Forms.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Tokens</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
+      </Reference>
       <Reference>
         <Name>Orchard.Users</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Users/bin/Orchard.Users.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Workflows</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Workflows/bin/Orchard.Workflows.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -362,14 +382,9 @@
         <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
       </Reference>
       <Reference>
-        <Name>YamlDotNet</Name>
-        <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Layouts/bin/YamlDotNet.dll</VirtualPath>
-      </Reference>
-      <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Forms</Name>
@@ -383,6 +398,16 @@
     <VirtualPath>~/Modules/Orchard.Widgets/bin/Orchard.Widgets.dll</VirtualPath>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
+      <Reference>
+        <Name>Markdown</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/Markdown.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>MarkdownSharp</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/MarkdownSharp.dll</VirtualPath>
+      </Reference>
       <Reference>
         <Name>Orchard.Alias</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -446,7 +471,7 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -528,7 +553,7 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -625,7 +650,7 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -637,7 +662,7 @@
       <Reference>
         <Name>MSTranslitTools</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Localization/bin/MSTranslitTools.DLL</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Alias</Name>
@@ -749,7 +774,7 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -759,9 +784,54 @@
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <References>
       <Reference>
+        <Name>MSTranslitTools</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Alias</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Alias/bin/Orchard.Alias.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Autoroute</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Autoroute/bin/Orchard.Autoroute.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Blogs</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Blogs/bin/Orchard.Blogs.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Comments</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Comments/bin/Orchard.Comments.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Conditions</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Conditions/bin/Orchard.Conditions.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.ContentPicker</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.ContentPicker/bin/Orchard.ContentPicker.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.ContentTypes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.ContentTypes/bin/Orchard.ContentTypes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Forms</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Forms/bin/Orchard.Forms.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Layouts</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Layouts/bin/Orchard.Layouts.dll</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Localization</Name>
@@ -769,9 +839,59 @@
         <VirtualPath>~/Modules/Orchard.Localization/bin/Orchard.Localization.dll</VirtualPath>
       </Reference>
       <Reference>
+        <Name>Orchard.MediaLibrary</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.MediaLibrary/bin/Orchard.MediaLibrary.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Modules</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Modules/bin/Orchard.Modules.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Packaging</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Packaging/bin/Orchard.Packaging.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Projections</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Projections/bin/Orchard.Projections.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Scripting</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Scripting/bin/Orchard.Scripting.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Tags</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Tags/bin/Orchard.Tags.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Tokens</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Widgets</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Widgets/bin/Orchard.Widgets.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Workflows</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Workflows/bin/Orchard.Workflows.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>YamlDotNet.Dynamic</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -787,6 +907,11 @@
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <References>
       <Reference>
+        <Name>MSTranslitTools</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Alias</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Alias/bin/Orchard.Alias.dll</VirtualPath>
@@ -797,6 +922,11 @@
         <VirtualPath>~/Modules/Orchard.Autoroute/bin/Orchard.Autoroute.dll</VirtualPath>
       </Reference>
       <Reference>
+        <Name>Orchard.ContentTypes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.ContentTypes/bin/Orchard.ContentTypes.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Localization</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Localization/bin/Orchard.Localization.dll</VirtualPath>
@@ -805,6 +935,26 @@
         <Name>Orchard.MediaLibrary</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.MediaLibrary/bin/Orchard.MediaLibrary.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Modules</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Modules/bin/Orchard.Modules.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Packaging</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Packaging/bin/Orchard.Packaging.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Tokens</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -1323,7 +1473,7 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -1413,6 +1563,16 @@
     <VirtualPath>~/Modules/Orchard.DynamicForms/bin/Orchard.DynamicForms.dll</VirtualPath>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
+      <Reference>
+        <Name>Markdown</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/Markdown.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>MarkdownSharp</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/MarkdownSharp.dll</VirtualPath>
+      </Reference>
       <Reference>
         <Name>Mono.CSharp</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -1521,7 +1681,7 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -1609,9 +1769,69 @@
         <VirtualPath>~/Modules/Orchard.Alias/bin/Orchard.Alias.dll</VirtualPath>
       </Reference>
       <Reference>
+        <Name>Orchard.Autoroute</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Autoroute/bin/Orchard.Autoroute.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Conditions</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Conditions/bin/Orchard.Conditions.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.ContentTypes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.ContentTypes/bin/Orchard.ContentTypes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Layouts</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Layouts/bin/Orchard.Layouts.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.MediaLibrary</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.MediaLibrary/bin/Orchard.MediaLibrary.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Modules</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Modules/bin/Orchard.Modules.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Packaging</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Packaging/bin/Orchard.Packaging.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Projections</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Projections/bin/Orchard.Projections.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Scripting</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Scripting/bin/Orchard.Scripting.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Tokens</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Widgets</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Widgets/bin/Orchard.Widgets.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>YamlDotNet.Dynamic</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -1713,9 +1933,24 @@
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <References>
       <Reference>
+        <Name>MSTranslitTools</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Alias</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Alias/bin/Orchard.Alias.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Autoroute</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Autoroute/bin/Orchard.Autoroute.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.ContentTypes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.ContentTypes/bin/Orchard.ContentTypes.dll</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Localization</Name>
@@ -1726,6 +1961,26 @@
         <Name>Orchard.MediaLibrary</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.MediaLibrary/bin/Orchard.MediaLibrary.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Modules</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Modules/bin/Orchard.Modules.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Packaging</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Packaging/bin/Orchard.Packaging.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Tokens</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -1899,7 +2154,7 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -1955,13 +2210,78 @@
     <References>
       <Reference>
         <Name>JetBrains.Annotations</Name>
-        <LoaderName>DynamicExtensionLoader</LoaderName>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Themes/PJS.Bootstrap/bin/JetBrains.Annotations.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Alias</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Alias/bin/Orchard.Alias.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Autoroute</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Autoroute/bin/Orchard.Autoroute.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Blogs</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Blogs/bin/Orchard.Blogs.dll</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Comments</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Comments/bin/Orchard.Comments.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Conditions</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Conditions/bin/Orchard.Conditions.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.ContentPicker</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.ContentPicker/bin/Orchard.ContentPicker.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.ContentTypes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.ContentTypes/bin/Orchard.ContentTypes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Forms</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Forms/bin/Orchard.Forms.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Layouts</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Layouts/bin/Orchard.Layouts.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.MediaLibrary</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.MediaLibrary/bin/Orchard.MediaLibrary.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Modules</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Modules/bin/Orchard.Modules.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Packaging</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Packaging/bin/Orchard.Packaging.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Projections</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Projections/bin/Orchard.Projections.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Scripting</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Scripting/bin/Orchard.Scripting.dll</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Search</Name>
@@ -1974,9 +2294,34 @@
         <VirtualPath>~/Modules/Orchard.Tags/bin/Orchard.Tags.dll</VirtualPath>
       </Reference>
       <Reference>
+        <Name>Orchard.Themes</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Themes/bin/Orchard.Themes.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Tokens</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Users</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Users/bin/Orchard.Users.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Widgets</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Widgets/bin/Orchard.Widgets.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Workflows</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Workflows/bin/Orchard.Workflows.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>YamlDotNet.Dynamic</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -2134,15 +2479,25 @@
       <Reference>
         <Name>YamlDotNet.Dynamic</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Modules/Orchard.Blogs/bin/YamlDotNet.Dynamic.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/YamlDotNet.Dynamic.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
   <Dependency>
     <ModuleName>Vandelay.TranslationManager</ModuleName>
-    <VirtualPath>~/Modules/Vandelay.TranslationManager/Vandelay.TranslationManager.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Vandelay.TranslationManager/bin/Vandelay.TranslationManager.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
+      <Reference>
+        <Name>Fluent.IO</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Vandelay.TranslationManager/bin/Fluent.IO.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Fluent.Zip</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Vandelay.TranslationManager/bin/Fluent.Zip.dll</VirtualPath>
+      </Reference>
       <Reference>
         <Name>ICSharpCode.SharpZipLib</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -2152,9 +2507,15 @@
   </Dependency>
   <Dependency>
     <ModuleName>VirtoCommerce.Webshop</ModuleName>
-    <VirtualPath>~/Modules/VirtoCommerce.Webshop/VirtoCommerce.Webshop.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
-    <References />
+    <VirtualPath>~/Modules/VirtoCommerce.Webshop/bin/VirtoCommerce.Webshop.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>VirtoCommerce.ApiClient</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/VirtoCommerce.Webshop/bin/VirtoCommerce.ApiClient.dll</VirtualPath>
+      </Reference>
+    </References>
   </Dependency>
   <Dependency>
     <ModuleName>XmlRpc</ModuleName>

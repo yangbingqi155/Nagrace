@@ -10,6 +10,10 @@
     产品详细页面公用
 */
 
+.align-center {
+    text-align: center;
+}
+
 .p_desc {
     max-width: 1920px;
     min-width: @min_width;
@@ -35,6 +39,7 @@
     width: 100%;
     min-width: @min_width;
     max-width: @max_width;
+    text-align:center;
 }
 
 .on_container(@top,@left) {
@@ -512,6 +517,17 @@
 
 
 /*HPH Meeting Box*/
+.meetingbox_large_title_blue {
+    font-size: 30px;
+    font-weight: bold;
+    color: #78c3ef;
+}
+.meetingbox_large_title_white {
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
 .meetingroom_outside {
     background-color: #F2F2F2;
     width: 100%;
@@ -532,45 +548,50 @@
         text-align: center;
     }
 }
-@media (max-width: 1920px) and (min-width:1024px){
+
 .main_p_img_sub_meetingroom {
     background-color: #F2F2F2;
-    width: 100%;
+    width: 1000px;
     position: relative;
-    margin-bottom: 130px;
+    margin: 0 auto 130px auto;
 
     .bg_img {
         margin: 0 auto;
-        width: 40.20%;
-
-        img {
-            width: 100%;
-        }
     }
 
     .computer {
         position: absolute;
-        width: 17.39%;
-        left: 19.89%;
-        top: 73.39%;
-
-        img {
-            width: 100%;
-        }
+        left: -9%;
+        top: 73%;
     }
 
     .phone {
-        width: 8.07%;
-        left: 65.57%;
-        top: 73.39%;
+        right: 3%;
+        top: 71%;
         position: absolute;
+    }
+}
 
-        img {
-            width: 100%;
+@media screen and (max-width: 1200px) {
+    .main_p_img_sub_meetingroom {
+        .bg_img {
+            width: 70%;
+        }
+
+        .computer {
+            left: -3%;
+            top: 72%;
+            width: 30%;
+        }
+
+        .phone {
+            right: 7%;
+            top: 70%;
+            width: 14%;
         }
     }
 }
-}
+
 
 .main_p_img_sub_functionsinone {
     background-color: #F2F2F2;
@@ -594,16 +615,15 @@
         color: #78c3ef;
         font-family: 'Microsoft YaHei';
         text-align: center;
-        width:100%;
-        left:0;
-        top:7.5%;
+        width: 100%;
+        left: 0;
+        top: 7.5%;
     }
 
-    .icon_title
-    {
-        font-size:16px;
-        color:#FFFFFF;
-        text-align:center;
+    .icon_title {
+        font-size: 16px;
+        color: #FFFFFF;
+        text-align: center;
     }
 
     .camera {
@@ -638,6 +658,7 @@
             width: 100%;
         }
     }
+
     .speaker {
         width: 4.73%;
         left: 69.84%;
@@ -648,6 +669,7 @@
             width: 100%;
         }
     }
+
     .wifi {
         width: 4.79%;
         left: 60.72%;
@@ -658,6 +680,7 @@
             width: 100%;
         }
     }
+
     .bracket {
         width: 4.73%;
         left: 69.84%;
@@ -668,4 +691,75 @@
             width: 100%;
         }
     }
+}
+
+.main_p_img_sub_zoomcamera {
+    margin: 0 auto;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1400px) {
+    .main_p_img_sub_zoomcamera {
+        .bg_img {
+            width: 1000px;
+        }
+    }
+}
+
+.main_p_img_sub_cpuandgpu {
+    position: relative;
+    background-image: url(../../../Media/Default/Products/HPH-Meeting-Box/bg4.jpg);
+    width: 100%;
+    height: 800px;
+    
+    .cpu_gpu_box {
+        top:140px;
+        left:0;
+        right:0;
+        bottom:0;
+        position: absolute;
+        text-align:center;
+        margin:auto;
+        width:970px;
+        .cpu_box {
+            float:left;
+            .cpu_img {
+            }
+
+            .cpu_title {
+                .meetingbox_large_title_blue;
+                margin-top:40px;
+            }
+
+            .cpu_sub_title {
+                .meetingbox_large_title_white;
+                margin-top:40px;
+            }
+        }
+
+        .gpu_box {
+            float:left;
+            margin-left:250px;
+            .gpu_img {
+            }
+
+            .gpu_title {
+                .meetingbox_large_title_blue;
+                margin-top:40px;
+            }
+
+            .gpu_sub_title {
+                .meetingbox_large_title_white;
+                margin-top:40px;
+            }
+        }
+    }
+}
+.main_p_img_sub_meeting{
+    width:100%;
+    .bg_img{
+        width:100%;
+    }
+
 }
