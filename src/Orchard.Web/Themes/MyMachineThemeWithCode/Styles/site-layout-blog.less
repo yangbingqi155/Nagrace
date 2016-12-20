@@ -1,5 +1,14 @@
 ﻿@blog-site-width: 1024px;
 
+html body {
+    background-color: #dedede;
+}
+
+#layout-wrapper {
+    width: @blog-site-width;
+    background-color: #FFFFFF;
+    margin:0 auto;
+}
 
 #layout-header, #layout-featured, #layout-before-main, #layout-main, #layout-footer, #layout-after-main, #layout-tripel {
     width: @blog-site-width;
@@ -12,22 +21,53 @@
 
 #layout-navigation {
     width: @blog-site-width;
+    height: 110px;
 }
 
-ul.recent-posts{
-    list-style-type:none;
+ul.recent-posts {
+    list-style-type: none;
+
+    li {
+        list-style-type: none;
+    }
+
+    li a {
+        color: #76a934;
+        font-size: 12px;
+    }
+}
+
+.list_header {
+    background-color: #ededed;
+    font-size: 16px;
+    line-height: 30px;
+    padding-left: 12px;
+}
+
+ul.navbar-nav {
+    float: right;
+    padding-right: 30px;
+    margin-top: 20px;
+
+    li a {
+        font-size: 18px;
+    }
+}
+
+#branding {
+    width: 300px;
+    position: absolute;
+    top: -20px;
+}
+
+.aside-2 #layout-content
+{
+    float: left;
+    width: 658px;
+}
+ul.blog-posts
+{
     li{
-        list-style-type:none;
+        border-bottom:1px solid #dbdbdb;
     }
-    li a{
-        color:#76a934;
-        font-size:12px;
-    }
-}
-
-.list_header{
-    background-color:#ededed;
-    font-size:16px;
-    line-height:30px;
-    padding-left:12px;
 }
