@@ -39,7 +39,7 @@
     width: 100%;
     min-width: @min_width;
     max-width: @max_width;
-    text-align:center;
+    text-align: center;
 }
 
 .on_container(@top,@left) {
@@ -522,6 +522,7 @@
     font-weight: bold;
     color: #78c3ef;
 }
+
 .meetingbox_large_title_white {
     font-size: 30px;
     font-weight: bold;
@@ -565,9 +566,15 @@
         top: 73%;
     }
 
-    .phone {
+    .pad {
         right: 3%;
         top: 71%;
+        position: absolute;
+    }
+
+    .phone {
+        right: 14%;
+        top: 85%;
         position: absolute;
     }
 }
@@ -584,112 +591,101 @@
             width: 30%;
         }
 
-        .phone {
+        .pad {
             right: 7%;
             top: 70%;
             width: 14%;
+        }
+
+        .phone {
+            right: 16%;
+            top: 81%;
+            width: 8%;
         }
     }
 }
 
 
 .main_p_img_sub_functionsinone {
-    background-color: #F2F2F2;
-    width: 100%;
     position: relative;
+    background-image: url(../../../Media/Default/Products/HPH-Meeting-Box/bg2.jpg);
+    width: 100%;
+    height: 800px;
     margin-top: 52px;
 
-    .bg_img {
+    .functionsinone_box {
+        width: 1020px;
         margin: 0 auto;
-        width: 100%;
 
-        img {
+        .header_title {
+            font-size: 30px;
+            font-weight: bold;
+            color: #78c3ef;
+            font-family: 'Microsoft YaHei';
+            text-align: center;
             width: 100%;
+            padding-top: 40px;
+            margin-bottom: 50px;
         }
-    }
 
-    .header_title {
-        position: absolute;
-        font-size: 30px;
-        font-weight: bold;
-        color: #78c3ef;
-        font-family: 'Microsoft YaHei';
-        text-align: center;
-        width: 100%;
-        left: 0;
-        top: 7.5%;
+        .left {
+            float: left;
+
+            .function_1_img {
+            }
+
+            .function_2_img {
+            }
+        }
+
+        .right {
+            float: left;
+            margin-left: 100px;
+            padding-top: 34px;
+
+            .line {
+                margin-top: 40px;
+
+                .camera {
+                    float: left;
+                    width:110px;
+                }
+
+                .encoder {
+                    float: left;
+                    margin-left: 70px;
+                    width:140px;
+                }
+
+                .microphone {
+                    float: left;
+                    width:110px;
+                }
+
+                .speaker {
+                    float: left;
+                    margin-left: 70px;
+                    width:140px;
+                }
+
+                .wifi {
+                    float: left;
+                    width:110px;
+                }
+
+                .bracket {
+                    float: left;
+                    margin-left: 70px;
+                    width:140px;
+                }
+            }
+        }
     }
 
     .icon_title {
         font-size: 16px;
         color: #FFFFFF;
         text-align: center;
-    }
-
-    .camera {
-        position: absolute;
-        width: 4.79%;
-        left: 60.72%;
-        top: 25.00%;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    .encoder {
-        width: 4.73%;
-        left: 69.84%;
-        top: 25%;
-        position: absolute;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    .microphone {
-        width: 4.79%;
-        left: 60.72%;
-        top: 45%;
-        position: absolute;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    .speaker {
-        width: 4.73%;
-        left: 69.84%;
-        top: 45%;
-        position: absolute;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    .wifi {
-        width: 4.79%;
-        left: 60.72%;
-        top: 64.25%;
-        position: absolute;
-
-        img {
-            width: 100%;
-        }
-    }
-
-    .bracket {
-        width: 4.73%;
-        left: 69.84%;
-        top: 64.25%;
-        position: absolute;
-
-        img {
-            width: 100%;
-        }
     }
 }
 
@@ -712,54 +708,271 @@
     background-image: url(../../../Media/Default/Products/HPH-Meeting-Box/bg4.jpg);
     width: 100%;
     height: 800px;
-    
+
     .cpu_gpu_box {
-        top:140px;
-        left:0;
-        right:0;
-        bottom:0;
+        top: 140px;
+        left: 0;
+        right: 0;
+        bottom: 0;
         position: absolute;
-        text-align:center;
-        margin:auto;
-        width:970px;
+        text-align: center;
+        margin: auto;
+        width: 970px;
+
         .cpu_box {
-            float:left;
+            float: left;
+
             .cpu_img {
             }
 
             .cpu_title {
                 .meetingbox_large_title_blue;
-                margin-top:40px;
+                margin-top: 40px;
             }
 
             .cpu_sub_title {
                 .meetingbox_large_title_white;
-                margin-top:40px;
+                margin-top: 40px;
             }
         }
 
         .gpu_box {
-            float:left;
-            margin-left:250px;
+            float: left;
+            margin-left: 250px;
+
             .gpu_img {
             }
 
             .gpu_title {
                 .meetingbox_large_title_blue;
-                margin-top:40px;
+                margin-top: 40px;
             }
 
             .gpu_sub_title {
                 .meetingbox_large_title_white;
-                margin-top:40px;
+                margin-top: 40px;
             }
         }
     }
 }
-.main_p_img_sub_meeting{
-    width:100%;
-    .bg_img{
-        width:100%;
+
+.main_p_img_sub_meeting {
+    width: 100%;
+
+    .bg_img {
+        width: 100%;
+    }
+}
+
+.main_p_img_sub_cameradetail {
+    width: 100%;
+    position: relative;
+
+    .bg_img {
+        width: 100%;
     }
 
+    .header_title {
+        position: absolute;
+        top: 6%;
+        left: 22%;
+        text-align: left;
+
+        .camera_title {
+            .meetingbox_large_title_blue;
+        }
+
+        .camera_sub_title {
+            margin-top: 3%;
+            line-height: 31px;
+            font-size: 20px;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.main_p_img_sub_wide_angle {
+    width: 100%;
+    margin: 35px 0 20px 0;
+    text-align: center;
+
+    .wide_angle_title {
+        .meetingbox_large_title_blue;
+    }
+
+    .wide_angle_sub_title {
+        margin-top: 20px;
+        line-height: 31px;
+        font-size: 20px;
+    }
+}
+
+.main_p_img_sub_wide_angle_degree {
+    width: 100%;
+    position: relative;
+
+    .bg_img {
+        width: 100%;
+    }
+}
+
+.main_p_img_sub_micro_voice {
+    width: 100%;
+    margin: 80px 0 60px 0;
+    text-align: center;
+
+    .micro_voice_title {
+        .meetingbox_large_title_blue;
+    }
+
+    .micro_voice_sub_title {
+        margin-top: 45px;
+        line-height: 31px;
+        font-size: 20px;
+    }
+}
+
+.main_p_img_sub_voice {
+    width: 100%;
+    position: relative;
+
+    .bg_img {
+        width: 100%;
+    }
+}
+
+
+.main_p_img_sub_speaker {
+    position: relative;
+    background-image: url(../../../Media/Default/Products/HPH-Meeting-Box/bg8.jpg);
+    width: 100%;
+    height: 800px;
+
+    .speaker_box {
+        top: 130px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        text-align: center;
+        margin: auto;
+        width: 1150px;
+
+        .speaker_title {
+            .meetingbox_large_title_blue;
+            margin-bottom: 100px;
+        }
+
+        .speaker_img {
+            float: left;
+        }
+
+        .speaker_desc {
+            width: 600px;
+            margin-left: 64px;
+            float: left;
+            font-size: 20px;
+            text-align: left;
+            margin-top: 50px;
+            line-height: 34px;
+        }
+    }
+}
+
+@media screen and (max-width:1150px) {
+    .main_p_img_sub_speaker {
+        .speaker_box {
+            width: 1020px;
+
+            .speaker_img {
+                img {
+                    width: 400px;
+                }
+            }
+
+            .speaker_desc {
+                margin-left: 20px;
+                margin-top: 24px;
+            }
+        }
+    }
+}
+
+.main_p_img_sub_360dregree {
+    width: 100%;
+    position: relative;
+
+    .bg_img {
+        width: 100%;
+    }
+}
+
+.main_p_img_sub_two_solution {
+    position: relative;
+    width: 1120px;
+    margin: 44px auto;
+    text-align: center;
+
+    .solution_title {
+        .meetingbox_large_title_blue;
+        margin-bottom: 82px;
+    }
+
+    .solution_first {
+        float: left;
+    }
+
+    .solution_second {
+        margin-left: 26px;
+        float: left;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    .main_p_img_sub_two_solution {
+        width: 1020px;
+
+        .solution_first {
+            img {
+                height: 660px;
+            }
+        }
+
+        .solution_second {
+            margin-left: 18px;
+
+            img {
+                height: 660px;
+            }
+        }
+    }
+}
+
+.main_p_img_sub_cloudservice {
+    width: 100%;
+    position: relative;
+    text-align: center;
+
+    .bg_img {
+        width: 100%;
+    }
+
+    .cloudservice_title_box {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        padding-top: 36px;
+        margin: auto;
+
+        .cloudservice_title {
+            .meetingbox_large_title_blue;
+        }
+
+        .cloudservice_sub_title {
+            .meetingbox_large_title_white;
+            font-weight: normal;
+        }
+    }
 }
