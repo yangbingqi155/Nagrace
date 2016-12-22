@@ -209,6 +209,7 @@
     <None Include="Styles\site-home.less" />
     <Content Include="Styles\Wow\animate.css" />
     <Content Include="ThemeZonePreview.png" />
+    <None Include="Views\Parts\NavigateComment.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
     <Content Include="Styles\Web.config" />
@@ -224,8 +225,9 @@
     <Content Include="Views\Parts\Localization.ContentTranslations.cshtml" />
     <Content Include="Styles\site-prodetail.less" />
     <Content Include="Views\Layout-url-our-blog.cshtml" />
-    <Content Include="Views\Parts\RecentCommentst.cshtml" />
+    <Content Include="Views\Parts\RecentComments.cshtml" />
     <Content Include="Views\Parts\Common.Body.Summary.cshtml" />
+    <Content Include="Views\Parts\TagCloud.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
