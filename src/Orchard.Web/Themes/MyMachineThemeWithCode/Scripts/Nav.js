@@ -1,4 +1,5 @@
 ﻿$(function () {
+    $(".navbar-nav>li>a").hover(function () { $(this).parent().find(".menu_icon_down").show(); }, function () { $(this).parent().find(".menu_icon_down").hide(); });
     $("#nav_products").find(".item").each(function (i,d) {
         $(d).hover(function () {
             if ($(this).hasClass("default")) {

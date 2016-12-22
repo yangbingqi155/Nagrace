@@ -29,11 +29,10 @@
             var tag = Tag(Model, "li");
             @tag.StartElement
             @renderedMenuItemLink
-
+            <img class="menu_icon_down" src="@Url.Content("~/Media/Default/Icon/icon_down.jpg")" />
             if (items.Any()) {
                 <ul class="dropdown-menu">
                     @DisplayChildren(Model)
-               
                 </ul>
             }
 
