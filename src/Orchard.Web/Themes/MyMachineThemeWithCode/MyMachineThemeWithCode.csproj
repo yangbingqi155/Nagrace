@@ -225,8 +225,7 @@
     <Content Include="Styles\site-prodetail.less" />
     <Content Include="Views\Layout-url-our-blog.cshtml" />
     <Content Include="Views\Parts\RecentCommentst.cshtml" />
-    <Content Include="Views\Parts\Comment-url-our-blog.cshtml" />
-    <Content Include="Views\Parts\Comment-url-category-blog-post-category.cshtml" />
+    <Content Include="Views\Parts\Common.Body.Summary.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">

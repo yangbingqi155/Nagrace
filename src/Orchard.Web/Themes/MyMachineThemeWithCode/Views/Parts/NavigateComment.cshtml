@@ -4,11 +4,12 @@
 
 @{
     CommentPart comment = Model.ContentPart;
-    CommentsPart comments = comment.CommentedOnContentItem.As<CommentsPart>();
+    CommentsPart comments = comment.CommentedOnContentItem.As<CommentsPart>
+    ();
     var isAuthorized = AuthorizedFor(Permissions.AddComment, Model.ContentItem);
 
     var children = New.List(Items: Model.Items);
-    children.Classes.Add("comments");
+    children.Classes.Add("blog-post-nav-comments");
 
     if (Model.Items.Count > 0) {
         Model.Classes.Add("has-replies");
@@ -18,24 +19,16 @@
 
     Model.Id = "comment-" + comment.Id;
     var tag = Tag(Model, "article");
-    
+
 }
 @tag.StartElement
-<header>
-    <h4>
-        <span class="who">@Display.CommentAuthor(ContentPart: comment) on </span>
-        @*<span class="when">@Display.CommentMetadata(ContentPart: comment)</span>
-        @if (comments.ThreadedComments && comments.CommentsActive && isAuthorized) {
-            @Display.CommentReplyButton(ContentPart: comment)
-        }*@
-    </h4>
-</header>
+
+<span class="who">@Display.CommentAuthor(ContentPart: comment) on </span>
+
 @if (Model.blogPost != null) {
     ContentItem contentItem = Model.blogPost;
     string title = Model.blogPost.BlogPostPart.title;
     @Html.ItemDisplayLink(title, contentItem);
 }
-@*@Display.CommentText(ContentPart: Model.ContentPart, ContentItem: Model.ContentItem)
 
-@Display(children)*@
 @tag.EndElement

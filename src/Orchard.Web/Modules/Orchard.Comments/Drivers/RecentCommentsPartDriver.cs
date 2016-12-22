@@ -51,7 +51,7 @@ namespace Orchard.Comments.Drivers {
 
                 foreach (var item in comments) {
                     var blogPost=_contentManager.Get(item.CommentedOn);
-                    var shape = shapeHelper.Parts_Comment(ContentPart: item, ContentItem: item.ContentItem, blogPost: blogPost);
+                    var shape = shapeHelper.Parts_NavigateComment(ContentPart: item, ContentItem: item.ContentItem, blogPost: blogPost);
                     allShapes.Add(item.Id, shape);
                 }
 
@@ -66,7 +66,6 @@ namespace Orchard.Comments.Drivers {
                 }
 
                 var list = shapeHelper.List(Items: firstLevelShapes);
-                part.Count = 6;
                 return shapeHelper.Parts_RecentComments(
                     List: list,
                     CommentCount: part.Count

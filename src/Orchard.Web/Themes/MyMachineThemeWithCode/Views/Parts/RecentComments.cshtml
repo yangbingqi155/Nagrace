@@ -3,8 +3,9 @@
     //CommentsPart commentsPart = Model.ContentPart;
 
     // add 'comments' class on the list container
-    Model.List.Classes.Add("comments");
+    Model.List.Classes.Add("blog-post-nav-comments");
 }
-
-@*<h2 class="comment-count">@T.Plural("No Comments", "1 Comment", "{0} Comments", (int)Model.CommentCount)</h2>*@
+<div class="list_header">
+    RECENT COMMENTS
+</div>
 @Display(Model.List)

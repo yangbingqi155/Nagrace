@@ -51,7 +51,7 @@
     //WorkContext.Layout.Header.Add(New.Branding(), "5"); // Site name and link to the home page
     WorkContext.Layout.Navigation.Add(New.Branding(), "1");
     WorkContext.Layout.Footer.Add(New.BadgeOfHonor(), "5"); // Powered by Orchard
-    //WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
+                                                            //WorkContext.Layout.Footer.Add(New.User(), "10"); // Login and dashboard links
 
     /* Last bit of code to prep the layout wrapper
     ***************************************************************/
@@ -128,23 +128,23 @@
     <div id="layout-tripel-container">
         <div id="layout-tripel" class="group">
             @* as in beer *@
-        @if (Model.TripelFirst != null) {
-            <div id="tripel-first">
-                @Zone(Model.TripelFirst)
-            </div>
-        }
-        @if (Model.TripelSecond != null) {
-            <div id="tripel-second">
-                @Zone(Model.TripelSecond)
-            </div>
-        }
-        @if (Model.TripelThird != null) {
-            <div id="tripel-third">
-                @Zone(Model.TripelThird)
-            </div>
-        }
+            @if (Model.TripelFirst != null) {
+                <div id="tripel-first">
+                    @Zone(Model.TripelFirst)
+                </div>
+            }
+            @if (Model.TripelSecond != null) {
+                <div id="tripel-second">
+                    @Zone(Model.TripelSecond)
+                </div>
+            }
+            @if (Model.TripelThird != null) {
+                <div id="tripel-third">
+                    @Zone(Model.TripelThird)
+                </div>
+            }
+        </div>
     </div>
-</div>
 }
 <div id="layout-footer" class="group">
     <footer id="footer">

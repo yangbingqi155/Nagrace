@@ -3,7 +3,7 @@
 @{
     var blogPost = Model.ContentItem;
 }
-<h3><a href="@Url.ItemDisplayUrl((IContent)blogPost)">@blogPost.TitlePart.Title</a></h3>
+<h3><a class="blog_post_title" href="@Url.ItemDisplayUrl((IContent)blogPost)">@blogPost.TitlePart.Title</a></h3>
 <div class="metadata" style="margin-bottom: 10px;">
     <time class="clearfix" datetime="@blogPost.CommonPart.CreatedUtc.ToLocalTime().ToString("yyyy-MM-dd")">@blogPost.CommonPart.CreatedUtc.ToLocalTime().ToString("dddd, MMMM d, yyyy")</time>
     @if (Model.Tags.Items.Count > 0 && ((IEnumerable<ShowTagViewModel>)Model.Tags.Items[0].Tags).Any()) {
@@ -12,6 +12,6 @@
     @Display(Model.CommentsCount)- @blogPost.CommonPart.Owner.UserName
 </div>
  
-<img style="width:252px;height:190px;float:left;" src="@blogPost.BlogPost.ImageTitle.Url   " class="attachment-post-thumbnail wp-post-image" alt="20151023194609_32831">
+<img src="@blogPost.BlogPost.ImageTitle.Url   " class="attachment-post-thumbnail wp-post-image blog_post-thumbnail" alt="">
 @Display(Model.Summary)
 <hr />
