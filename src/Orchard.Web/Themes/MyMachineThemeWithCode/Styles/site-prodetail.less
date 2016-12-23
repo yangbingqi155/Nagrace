@@ -60,11 +60,6 @@
     text-align: center;
 }
 
-.p_desc {
-    max-width: 1920px;
-    min-width: @min_width;
-}
-
 .center_width {
     width: @center_width;
 }
@@ -1047,7 +1042,7 @@
     text-align: center;
 
     .pro_title {
-        font-size:34px;
+        font-size: 34px;
         color: #333333;
         text-align: center;
         margin-top: 70px;
@@ -1074,23 +1069,21 @@
     height: 894px;
     text-align: center;
     padding-top: 56px;
+
     .pro_title {
-        font-size:34px;
+        font-size: 34px;
         color: #FFFFFF;
         text-align: center;
     }
-
-    
 }
 
 .main_p_img_sub_N8_kodi {
     position: relative;
     width: 100%;
-    height: 894px;
     text-align: center;
 
     .pro_title {
-        font-size:34px;
+        font-size: 34px;
         color: #333333;
         text-align: center;
         margin-top: 56px;
@@ -1102,23 +1095,204 @@
         text-align: center;
         margin-top: 40px;
     }
-    .kodi_img {
-            margin-top:80px;
-        }
 
+    .kodi_img {
+        margin-top: 80px;
+    }
 }
 
 @media (min-width:1300px) and (max-width:1688px) {
     .main_p_img_sub_N8_kodi {
         .kodi_img {
-            width:1300px;
+            width: 1300px;
         }
     }
 }
+
 @media screen and (max-width:1300px) {
     .main_p_img_sub_N8_kodi {
         .kodi_img {
-            width:1020px;
+            width: 1020px;
+        }
+    }
+}
+
+
+.main_p_img_sub_N8_nagrace_market {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    .nagrace_market_img {
+        margin-top: 60px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1300px) {
+    .main_p_img_sub_N8_nagrace_market {
+        .nagrace_market_img {
+            width: 1000px;
+        }
+    }
+}
+
+.main_p_img_sub_stable_system {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    background-color: #E7E5E6;
+    margin: 0 auto;
+    padding-top: 56px;
+
+    .pro_title {
+        font-size: 34px;
+        color: #333333;
+        text-align: center;
+    }
+
+    .pro_sub_title {
+        color: #787878;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .stable_system_img {
+        margin-top: 30px;
+    }
+}
+
+.main_p_img_sub_iptv {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 56px;
+
+    .pro_title {
+        font-size: 34px;
+        color: #333333;
+        text-align: center;
+    }
+
+    .pro_sub_title {
+        color: #787878;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .iptv_img_box {
+        margin-top: 30px;
+        padding-right: 12px;
+
+        .iptv_img {
+            float: left;
+            margin-left: 12px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (min-width:1750px) {
+    .main_p_img_sub_iptv {
+        width: 1732px;
+    }
+}
+
+@media (min-width:1176px) and (max-width:1750px) {
+    .main_p_img_sub_iptv {
+        width: 1166px;
+    }
+}
+
+@media screen and (max-width:1176px) {
+    .main_p_img_sub_iptv {
+        width: 1020px;
+
+        .iptv_img_box {
+            .iptv_img {
+                img {
+                    height: 285px;
+                }
+            }
+        }
+    }
+}
+
+.main_p_img_sub_N8_bits {
+    position: relative;
+    width: 1376px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 56px;
+
+    .N8_bits_img {
+        margin-top: 30px;
+    }
+
+    .p_desc_box {
+        position: absolute;
+        width: 100%;
+        z-index: 1000;
+        left: 0;
+        bottom: -120px;
+
+        .p_desc {
+            width: 50%;
+            float: left;
+            text-align: center;
+        }
+    }
+}
+
+
+@media screen and (max-width:1376px) {
+    .main_p_img_sub_N8_bits {
+        width: 1020px;
+
+        .N8_bits_img {
+            width: 1020px;
+        }
+
+        .p_desc_box {
+            bottom: -120px;
+        }
+    }
+}
+
+.bg_airplay_container_bgcolor {
+    background-color: #E3E3E3;
+    width: 100%;
+    padding-bottom: 150px;
+}
+
+.bg_airplay_container {
+    z-index: 1000;
+    top: 10px;
+    left: 711px;
+    position: absolute;
+
+    .airplay_bgimg {
+    }
+
+    .main_p_img_sub_airplay {
+        z-index: 1000;
+        top: 10px;
+        left: 664px;
+        position: absolute;
+
+        .airplay_top {
+            margin-left: 102px;
+
+            img {
+            }
+        }
+
+        .airplay_bottom {
+
+            img {
+            }
         }
     }
 }
