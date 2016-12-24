@@ -91,26 +91,27 @@
 
 .main_p_img_sub {
     margin: 0 auto;
-    width: 57.29%;
+    width: 1364px;
+    margin-top: 40px;
 
     .left {
-        width: 59.09%;
         float: left;
 
         img {
-            width: 100%;
         }
     }
 
     .right {
         float: left;
-        width: 31.81%;
-        margin-top: 11%;
-        margin-left: 9.09%;
+        margin-top: 50px;
+        margin-left: 127px;
 
         .title {
+            text-align: left;
+            padding-top: 52px;
+
             span {
-                font-size: 18px;
+                font-size: 30px;
                 font-weight: bold;
             }
 
@@ -124,36 +125,56 @@
         }
 
         .sub_title {
-            margin-top: 5%;
-            margin-bottom: 15%;
+            text-align: left;
+            margin-top: 5px;
+            margin-bottom: 40px;
 
             span {
-                font-size: 14px;
+                font-size: 20px;
             }
         }
 
         .item {
             text-align: left;
-            width: 100%;
+            margin-top: 35px;
 
-            .img {
-                width: 40.85%;
+            .item_img {
                 float: left;
-
-                img {
-                    width: 100%;
-                }
             }
 
-            .title {
-                width: 59.14%;
+            .item_title {
                 float: left;
-                padding-top: 9%;
+                line-height: 88px;
             }
         }
     }
 }
 
+@media (min-width:1180px) and (max-width:1364px) {
+    .main_p_img_sub {
+        width: 1170px;
+
+        .right {
+            width: 340px;
+        }
+    }
+}
+
+@media screen and (max-width:1180px) {
+    .main_p_img_sub {
+        width: 1010px;
+
+        .right {
+            margin-left: 20px;
+            width: 340px;
+        }
+
+        .left {
+            img {
+            }
+        }
+    }
+}
 
 .bg_hdmi_container {
     .on_container(5%,20%);
@@ -381,33 +402,87 @@
     margin: 0 auto;
     position: relative;
     z-index: 100;
-}
+    width: 1402px;
+    text-align: left;
 
-.bg_signage_container_bgimg {
-    width: 65.60%;
-    margin-left: 2%;
+    .bg_signage_container_bgimg {
+    }
 }
 
 .main_p_img_sub_signage {
-    .on_container(8%,64%);
+    top: 49px;
+    left: 897px;
     z-index: 1000;
-    width: 34.3%;
+    position: absolute;
+
+    .top {
+    }
+
+    .bottom {
+    }
+
+    .item .title {
+        color: @color_blue;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .item img {
+    }
 }
 
-.main_p_img_sub_signage .top {
+@media (min-width:1200px) and (max-width:1402px) {
+    .main_p_img_sub_signage {
+        top: 30px;
+        left: 735px;
+
+        .top {
+            img {
+                width: 440px;
+            }
+        }
+
+        .bottom {
+            img {
+                width: 440px;
+            }
+        }
+    }
+
+    .bg_signage_container {
+        width: 1190px;
+
+        .bg_signage_container_bgimg {
+            width: 790px;
+        }
+    }
 }
 
-.main_p_img_sub_signage .bottom {
-}
+@media screen and (max-width:1200px) {
+    .main_p_img_sub_signage {
+        top: 23px;
+        left: 633px;
 
-.main_p_img_sub_signage .item .title {
-    color: @color_blue;
-    text-align: center;
-    font-size: 18px;
-}
+        .top {
+            img {
+                width: 370px;
+            }
+        }
 
-.main_p_img_sub_signage .item img {
-    width: 100%;
+        .bottom {
+            img {
+                width: 370px;
+            }
+        }
+    }
+
+    .bg_signage_container {
+        width: 1010px;
+
+        .bg_signage_container_bgimg {
+            width: 680px;
+        }
+    }
 }
 
 .main_p_img_sub_rotation {
@@ -512,50 +587,77 @@
     width: 100%;
 }
 
-.bg_wifi_container {
-    .bg_container;
-    margin-top: 150px;
-    width: 70.30%;
-}
-
 .bg_wifi_container_bgcolor {
     background-color: #E3E3E3;
-    width: @fullscreen_width;
-    padding-bottom: 1.5%;
-}
-
-.bg_wifi_container_bgimg {
-    width: 60.85%;
-    max-width: 822px;
-}
-
-.main_p_img_sub_wifi {
-    .on_container(8%,52.85%);
-    z-index: 1000;
-    width: 39.10%;
-}
-
-.main_p_img_sub_wifi .top {
-    margin-left: 22%;
-    width: 59.65%;
-}
-
-.main_p_img_sub_wifi .top img {
-    width: 59.65%;
-    max-width: 315px;
-}
-
-.main_p_img_sub_wifi .bottom {
     width: 100%;
-    margin-top: 0;
-    margin-left: -10%;
+    padding-bottom: 70px;
+    padding-top: 70px;
 }
 
-.main_p_img_sub_wifi .bottom img {
-    width: 100%;
-    max-width: 528px;
+.bg_wifi_container {
+    width: 1144px;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
+
+    .wifi_bgimg {
+    }
+
+    .wifi_top {
+        z-index: 1000;
+        top: 10px;
+        left: 814px;
+        position: absolute;
+
+        img {
+        }
+    }
+
+    .wifi_bottom {
+        z-index: 1000;
+        top: 136px;
+        left: 633px;
+        position: absolute;
+
+        img {
+        }
+    }
 }
 
+@media screen and (max-width:1144px) {
+    .bg_wifi_container {
+        width: 1000px;
+        position: relative;
+        margin: 0 auto;
+        text-align: left;
+
+        .wifi_bgimg {
+            width: 680px;
+        }
+
+        .wifi_top {
+            z-index: 1000;
+            top: 10px;
+            left: 718px;
+            position: absolute;
+
+            img {
+                width: 280px;
+            }
+        }
+
+        .wifi_bottom {
+            z-index: 1000;
+            top: 136px;
+            left: 553px;
+            position: absolute;
+
+            img {
+                width: 430px;
+            }
+        }
+    }
+}
 
 /*HPH Meeting Box*/
 .meetingbox_large_title_blue {
@@ -1264,34 +1366,358 @@
 .bg_airplay_container_bgcolor {
     background-color: #E3E3E3;
     width: 100%;
-    padding-bottom: 150px;
+    padding-bottom: 70px;
+    padding-top: 70px;
 }
 
 .bg_airplay_container {
-    z-index: 1000;
-    top: 10px;
-    left: 711px;
-    position: absolute;
+    width: 1144px;
+    position: relative;
+    margin: 0 auto;
+    text-align: left;
 
     .airplay_bgimg {
     }
 
-    .main_p_img_sub_airplay {
+    .airplay_top {
         z-index: 1000;
         top: 10px;
-        left: 664px;
+        left: 814px;
         position: absolute;
 
+        img {
+        }
+    }
+
+    .airplay_bottom {
+        z-index: 1000;
+        top: 136px;
+        left: 633px;
+        position: absolute;
+
+        img {
+        }
+    }
+}
+
+@media screen and (max-width:1144px) {
+    .bg_airplay_container {
+        width: 1000px;
+        position: relative;
+        margin: 0 auto;
+        text-align: left;
+
+        .airplay_bgimg {
+            width: 680px;
+        }
+
         .airplay_top {
-            margin-left: 102px;
+            z-index: 1000;
+            top: 10px;
+            left: 718px;
+            position: absolute;
 
             img {
+                width: 280px;
             }
         }
 
         .airplay_bottom {
+            z-index: 1000;
+            top: 136px;
+            left: 553px;
+            position: absolute;
 
             img {
+                width: 430px;
+            }
+        }
+    }
+}
+
+
+.main_p_img_sub_lehome_assistant {
+    position: relative;
+    width: 1584px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 56px;
+
+    .pro_title {
+        font-size: 34px;
+        color: #333333;
+        text-align: center;
+    }
+
+    .pro_sub_title {
+        color: #787878;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .assistant_img_box {
+        margin-top: 100px;
+        position: relative;
+
+        .separate_img {
+            margin-left: 340px;
+        }
+
+        .assistant_img {
+            float: left;
+        }
+
+        .assistant_absolute_img {
+            left: 617px;
+            top: -81px;
+            position: absolute;
+        }
+    }
+}
+
+@media (min-width:1200px) and (max-width:1580px) {
+    .main_p_img_sub_lehome_assistant {
+        width: 1200px;
+
+        .assistant_img_box {
+            position: relative;
+            margin-top: 100px;
+
+            .separate_img {
+                margin-left: 260px;
+            }
+
+            .assistant_img {
+                float: left;
+
+                img {
+                    width: 235px;
+                }
+            }
+
+            .assistant_absolute_img {
+                left: 466px;
+                top: -64px;
+                position: absolute;
+
+                img {
+                    width: 270px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .main_p_img_sub_lehome_assistant {
+        width: 1000px;
+
+        .assistant_img_box {
+            position: relative;
+            margin-top: 100px;
+
+            .separate_img {
+                margin-left: 220px;
+            }
+
+            .assistant_img {
+                float: left;
+
+                img {
+                    width: 195px;
+                }
+            }
+
+            .assistant_absolute_img {
+                left: 388px;
+                top: -56px;
+                position: absolute;
+
+                img {
+                    width: 230px;
+                }
+            }
+        }
+    }
+}
+
+.main_p_img_sub_bluetooth4_bgcolor {
+    background-color: #e7e5e6;
+    margin-top: 140px;
+}
+
+.main_p_img_sub_bluetooth4 {
+    position: relative;
+    width: 1460px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-bottom: 40px;
+
+    .pro_title {
+        font-size: 34px;
+        color: #333333;
+        text-align: center;
+    }
+
+    .pro_sub_title {
+        color: #787878;
+        font-size: 24px;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .bluetooth4_img_box {
+        margin-right: 18px;
+        margin-top: 15px;
+        position: relative;
+
+        .bluetooth4_img {
+            float: left;
+            margin-left: 18px;
+            margin-top: 18px;
+        }
+    }
+}
+
+.main_p_img_sub_N8_remote_control {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 43px;
+
+    .pro_title {
+        font-size: 34px;
+        color: #333333;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .remote_control_img {
+    }
+}
+
+.main_p_img_sub_antutu_bgcolor {
+    background-color: #272727;
+}
+
+.main_p_img_sub_antutu {
+    width: 1486px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 130px;
+
+    .pro_header_img {
+        margin-top: 60px;
+    }
+
+    .antutu_img_box {
+        margin-top: 38px;
+
+        .antutu_img_left {
+            float: left;
+        }
+
+        .antutu_img_right {
+            margin-left: 50px;
+            float: left;
+        }
+    }
+}
+
+@media (min-width:1200px) and (max-width:1486px) {
+    .main_p_img_sub_antutu {
+        width: 1180px;
+
+        .antutu_img_box {
+            .antutu_img_left {
+                img {
+                    height: 324px;
+                }
+            }
+
+            .antutu_img_right {
+                margin-left: 35px;
+
+                img {
+                    height: 324px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .main_p_img_sub_antutu {
+        width: 1015px;
+
+        .antutu_img_box {
+            .antutu_img_left {
+                img {
+                    height: 281px;
+                }
+            }
+
+            .antutu_img_right {
+                margin-left: 15px;
+
+                img {
+                    height: 281px;
+                }
+            }
+        }
+    }
+}
+
+.main_p_img_sub_N8_two_solution_bgcolor {
+    background-color: #e7e5e6;
+    padding-bottom: 142px;
+}
+
+.main_p_img_sub_N8_two_solution {
+    position: relative;
+    width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 82px;
+
+    .solution_title {
+        .meetingbox_large_title_blue;
+        color: #333333;
+    }
+
+    .solution_sub_title {
+        font-size: 34px;
+    }
+
+    .solution_first {
+        float: left;
+    }
+
+    .solution_second {
+        margin-left: 26px;
+        float: left;
+    }
+}
+
+@media screen and (max-width:1120px) {
+    .main_p_img_sub_N8_two_solution {
+        width: 1016px;
+
+        .solution_first {
+            img {
+                height: 640px;
+            }
+        }
+
+        .solution_second {
+            margin-left: 18px;
+
+            img {
+                height: 640px;
             }
         }
     }
