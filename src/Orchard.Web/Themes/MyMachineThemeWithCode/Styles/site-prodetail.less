@@ -176,65 +176,82 @@
     }
 }
 
-.bg_hdmi_container {
-    .on_container(5%,20%);
-    z-index: 1000;
-    width: 61.5%;
-    /*margin-left:20%;*/
+.main_p_img_sub_hdmi {
+    width: 1200px;
+    margin: 0 auto;
+
+    .left {
+        float: left;
+        margin-top: 66px;
+
+        .title {
+            float: right;
+            margin-right: 25px;
+            margin-bottom: 10px;
+            color: @color_blue;
+            font-size: 20px;
+        }
+
+        .item img {
+        }
+    }
+
+    .right {
+        width: 295px;
+        float: left;
+        margin-left: 114px;
+
+        .title {
+            color: @color_blue;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .item {
+            margin-top: 2px;
+
+            img {
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .main_p_img_sub_hdmi {
+        width: 1020px;
+
+        .left {
+            .item img {
+                width: 700px;
+            }
+        }
+
+        .right {
+            width: 260px;
+            margin-top: 30px;
+            margin-left: 60px;
+
+            .item {
+                img {
+                    width: 260px;
+                }
+            }
+        }
+    }
 }
 
 
-.main_p_img_sub_hdmi {
+.main_p_img_sub_hdmi_bgimg {
+    background-image: url(../../../Media/Default/Products/NT-V6/bg/bg_04.jpg);
     width: 100%;
-    margin: 0 auto;
+    height: 718px;
+    padding-top: 34px;
 }
 
 .bg_hdmi_container_top {
-    .on_container(4%,0%);
     text-align: center;
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
-    width: 100%;
-}
-
-.main_p_img_sub_hdmi_bgimg {
-    width: 100%;
-}
-
-.main_p_img_sub_hdmi .left {
-    width: 65.30%;
-    float: left;
-    margin-top: 8%;
-}
-
-.main_p_img_sub_hdmi .left .title {
-    float: right;
-    margin-right: 25px;
-    margin-bottom: 10px;
-    color: @color_blue;
-}
-
-.main_p_img_sub_hdmi .left .item img {
-    width: @fullscreen_width;
-}
-
-.main_p_img_sub_hdmi .right {
-    width: 24.50%;
-    float: left;
-    margin-left: 9.5%;
-}
-
-.main_p_img_sub_hdmi .right .title {
-    color: @color_blue;
-    text-align: center;
-    font-weight: bold;
-}
-
-.main_p_img_sub_hdmi .right .item {
-    margin-top: 10px;
-}
-
-.main_p_img_sub_hdmi .right .item img {
     width: 100%;
 }
 
@@ -261,43 +278,96 @@
 }
 
 .main_p_img_sub_robots_bg {
-    margin-top: 200px;
-    max-width: 1362px;
+    text-align: center;
+    height: 600px;
+    margin-top: 100px;
 }
 
 .main_p_img_sub_robots_bgimg {
-    width: 52.45%;
-    max-width: 596px;
-    display: block;
-    margin: 0 auto;
+    margin-top: 140px;
 }
 
 .main_p_img_sub_robots {
-    .on_container(-45%,0);
     z-index: 1000;
-    width: 100%;
-    margin: 0 auto;
-}
+    width: 1356px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
 
-.main_p_img_sub_robots .item {
-    float: left;
+    .item {
+        float: left;
 
-    img {
-        width: 100%;
+        img {
+        }
+    }
+
+    .left {
+    }
+
+    .center {
+        margin-top: 10px;
+        margin-left: -12px;
+    }
+
+    .right {
     }
 }
 
-.main_p_img_sub_robots .left {
-    width: 42.7%;
+@media (min-width:1100px) and (max-width:1356px) {
+    .main_p_img_sub_robots {
+        width: 1100px;
+
+        .left {
+            img {
+                width: 460px;
+            }
+        }
+
+        .center {
+            margin-top: 40px;
+            margin-left: -12px;
+
+            img {
+                width: 200px;
+            }
+        }
+
+        .right {
+            img {
+                width: 450px;
+            }
+        }
+    }
 }
 
-.main_p_img_sub_robots .center {
-    width: 17.30%;
-    margin-top: 5%;
-}
+@media screen and (max-width:1100px) {
+    .main_p_img_sub_robots {
+        width: 1024px;
 
-.main_p_img_sub_robots .right {
-    width: 39.90%;
+        .left {
+            img {
+                width: 425px;
+            }
+        }
+
+        .center {
+            margin-top: 50px;
+            margin-left: -6px;
+
+            img {
+                width: 190px;
+            }
+        }
+
+        .right {
+            img {
+                width: 415px;
+            }
+        }
+    }
 }
 
 .main_p_img_sub_cpudetail_bg {
@@ -310,7 +380,7 @@
 }
 
 .main_p_img_sub_memory {
-    width: 54.94%;
+    width: 1018px;
     margin: 50px auto;
 
     .top {
@@ -321,12 +391,10 @@
     }
 
     .left {
-        width: 40%;
     }
 
     .right {
-        width: 40%;
-        margin-left: 20%;
+        margin-left: 190px;
     }
 
     .item {
@@ -340,7 +408,6 @@
         }
 
         img {
-            width: 100%;
         }
     }
 }
@@ -486,59 +553,56 @@
 }
 
 .main_p_img_sub_rotation {
-    margin: 50px auto;
-    width: 70.72%;
-}
+    margin: 100px auto 20px auto;
+    width: 1266px;
 
-.main_p_img_sub_rotation .item {
-    float: left;
-    height: 100%;
+    .item {
+        float: left;
+    }
 
-    img {
-        width: 100%;
+    .left {
+        text-align: center;
+
+        .title {
+            font-size: 28px;
+            color: @color_blue;
+            font-weight: 900;
+        }
+
+        .sub_title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .center {
+        margin-top: 305px;
+        margin-left: 30px;
     }
 }
 
+@media screen and (max-width:1266px) {
+    .main_p_img_sub_rotation {
+        width: 1024px;
 
-.main_p_img_sub_rotation .left {
-    text-align: center;
-    width: 48.30%;
+        .left {
+            img {
+                width: 525px;
+            }
+        }
 
-    img {
-        max-width: 656px;
-    }
+        .center {
+            margin-left: 0;
+            margin-top:260px;
+        }
 
-    .title {
-        font-size: 28px;
-        color: @color_blue;
-        font-weight: 900;
-    }
-
-    .sub_title {
-        font-size: 24px;
-        font-weight: bold;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-}
-
-
-.main_p_img_sub_rotation .center {
-    img {
-        max-width: 61px;
-    }
-
-    margin-left: 4.49%;
-    margin-top: 22%;
-    width: 4.49%;
-}
-
-.main_p_img_sub_rotation .right {
-    margin-left: 4.49%;
-    width: 38.21%;
-
-    img {
-        max-width: 519px;
+        .right {
+            img {
+                width: 438px;
+            }
+        }
     }
 }
 
@@ -1451,12 +1515,11 @@
 
     .pro_title {
         font-size: 34px;
-        color: #333333;
+       color:#52aed7;
         text-align: center;
     }
 
     .pro_sub_title {
-        color: #787878;
         font-size: 24px;
         text-align: center;
         margin-top: 30px;
