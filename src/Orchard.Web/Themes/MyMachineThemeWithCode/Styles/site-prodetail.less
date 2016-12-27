@@ -1285,14 +1285,17 @@
         .N8_true_4k_img_box {
             width: 1020px;
             top: 220px;
-            .left{
-                width:385px;
+
+            .left {
+                width: 385px;
             }
-            .center{
-                width:300px;
+
+            .center {
+                width: 300px;
             }
-            .right{
-                width:335px;
+
+            .right {
+                width: 335px;
             }
         }
     }
@@ -1405,11 +1408,11 @@
 
     .iptv_img_box {
         margin-top: 30px;
-        padding-right: 12px;
+        padding-left: 16px;
 
         .iptv_img {
             float: left;
-            margin-left: 12px;
+            margin-left: 0px;
             margin-top: 20px;
         }
     }
@@ -1421,20 +1424,20 @@
     }
 }
 
-@media (min-width:1176px) and (max-width:1750px) {
+@media (min-width:1164px) and (max-width:1750px) {
     .main_p_img_sub_iptv {
-        width: 1166px;
+        width: 1160px;
     }
 }
 
-@media screen and (max-width:1176px) {
+@media screen and (max-width:1164px) {
     .main_p_img_sub_iptv {
         width: 1020px;
 
         .iptv_img_box {
             .iptv_img {
                 img {
-                    height: 285px;
+                    width: 502px;
                 }
             }
         }
@@ -1488,6 +1491,13 @@
     width: 100%;
     padding-bottom: 70px;
     padding-top: 70px;
+}
+
+.airplay_title{
+    font-size:38px;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:70px;
 }
 
 .bg_airplay_container {
@@ -1668,7 +1678,7 @@
 
 .main_p_img_sub_bluetooth4 {
     position: relative;
-    width: 1460px;
+    width: 1416px;
     text-align: center;
     margin: 0 auto;
     padding-top: 60px;
@@ -1700,6 +1710,34 @@
         }
     }
 }
+
+@media (min-width:1200px) and (max-width:1416px) {
+    .main_p_img_sub_bluetooth4 {
+        width: 1200px;
+
+        .bluetooth4_img_box {
+            .bluetooth4_img {
+                img {
+                    width: 376px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .main_p_img_sub_bluetooth4 {
+        width: 1024px;
+
+        .bluetooth4_img_box {
+            .bluetooth4_img {
+                img {
+                    width: 317px;
+                }
+            }
+        }
+    }
+}
+
 
 .main_p_img_sub_N8_remote_control {
     position: relative;
