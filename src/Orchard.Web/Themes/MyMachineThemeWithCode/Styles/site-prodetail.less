@@ -1493,11 +1493,11 @@
     padding-top: 70px;
 }
 
-.airplay_title{
-    font-size:38px;
-    font-weight:bold;
-    text-align:center;
-    margin-bottom:70px;
+.airplay_title {
+    font-size: 38px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 70px;
 }
 
 .bg_airplay_container {
@@ -1724,6 +1724,7 @@
         }
     }
 }
+
 @media screen and (max-width:1200px) {
     .main_p_img_sub_bluetooth4 {
         width: 1024px;
@@ -1880,51 +1881,101 @@
     }
 }
 
+.camera-360_advertise {
+    width: 100%;
+    height: 900px;
+
+    .carousel-indicators {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        z-index: 15;
+        list-style: none;
+        text-align: center;
+        background-color: #EAE9E9;
+        width: 1372px;
+
+
+        li {
+            width: 212px;
+            height: 162px;
+            display: block;
+            margin: 0px;
+            margin-left: 20px;
+            padding: 10px 0;
+            text-indent: 0;
+            border: 2px solid #EAE9E9;
+            border-radius: 0;
+            cursor: pointer;
+            float: left;
+        }
+
+        li:first-child {
+             margin-left: 0px;
+        }
+
+        li.active {
+            border: 2px solid #7bbb31;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .camera-360_advertise {
+        .carousel-indicators {
+            bottom: -137px;
+        }
+    }
+}
+
 /*
     Spec页面样式
 */
 
-.spec_box
-{
-    margin:20px auto 20px auto;
-    width:1024px;
-    text-align:center;
+.spec_box {
+    margin: 20px auto 20px auto;
+    width: 1024px;
+    text-align: center;
 }
-.row h3{
-    text-align:left;
+
+.row h3 {
+    text-align: left;
 }
 
 /*
     Package页面样式
 */
-.package_box
-{
-    margin:20px auto 20px auto;
-    width:1024px;
-    text-align:center;
+.package_box {
+    margin: 20px auto 20px auto;
+    width: 1024px;
+    text-align: center;
 }
 
 
 /*
     Reviews页面样式
 */
-.reviews_box
-{
-    margin:20px auto 20px auto;
-    width:960px;
-    text-align:left;
+.reviews_box {
+    margin: 20px auto 20px auto;
+    width: 960px;
+    text-align: left;
 }
-ul.reviews_container{
-    li{
-        padding:8px 0;
-        margin-left:20px;
-        a{
-            font-size:16px;
-            text-decoration:none;
-            color:#888;
+
+ul.reviews_container {
+    li {
+        padding: 8px 0;
+        margin-left: 20px;
+
+        a {
+            font-size: 16px;
+            text-decoration: none;
+            color: #888;
         }
-        a:hover{
-            color:#333333;
+
+        a:hover {
+            color: #333333;
         }
     }
 }
