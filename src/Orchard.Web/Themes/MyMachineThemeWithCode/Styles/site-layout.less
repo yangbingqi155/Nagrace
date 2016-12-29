@@ -65,27 +65,26 @@
 
         li {
             height: 100px;
-            text-align:center;
+            text-align: center;
 
             a {
                 margin-top: 30px;
                 font-size: 18px;
                 color: #353535;
                 text-decoration: none;
-                padding-bottom:0;
+                padding-bottom: 0;
             }
 
             a:hover {
-                background-color:#FFFFFF;
-                color:#7bbb31;
+                background-color: #FFFFFF;
+                color: #7bbb31;
             }
         }
     }
 }
 
-.menu_icon_down
-{
-    display:none;
+.menu_icon_down {
+    display: none;
 }
 
 .sub-nav {
@@ -103,6 +102,15 @@
     float: left;
     width: 155px;
     height: 130px;
+    text-align: center;
+
+    .product_name {
+        margin-top: 5px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        color: #333333;
+    }
 }
 
 .sub-nav .default img {
@@ -130,13 +138,21 @@
 /*footer
 ***********************************/
 
+
 .footer-quad {
 }
 
+#footer-quad > div {
+    float: left;
+    width: 190px;
+    height: 235px;
+    border-left:1px solid #C5C5C5;
+    padding-left:15px;
+}
 
 .footer-quad h2 {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .footer-quad ul {
@@ -150,36 +166,68 @@
 .footer-quad ul.list-unstyled li a {
     text-decoration: none;
     color: #333333;
-    font-size: 12px;
+    font-size: 18px;
+    line-height: 30px;
 }
 
+#layout-footer {
+    padding: 20px 0 0 0;
+    width: 100%;
+}
 
+#footer {
+    width: 100%;
+}
+
+#footer-quad {
+    width: 960px;
+    margin: 0 auto;
+}
+
+#footer-sig {
+    width: 100%;
+    background-color: #f6f7f7;
+    padding: 30px 0;
+    margin-top: 20px;
+}
+
+.credits {
+    margin: 0 auto;
+    width: 510px;
+
+    .copyright {
+        font-size: 18px;
+        color: #333333;
+    }
+}
 /*
     About Us
 */
-.about_us_container{
-    width:1024px;
-    margin:20px auto 20px auto;
-    .about_us_nav{
-        width:220px;
-        float:left;
-        .nav_header{
-            font-weight:bold;
-            font-size:20px;
+.about_us_container {
+    width: 1024px;
+    margin: 20px auto 20px auto;
+
+    .about_us_nav {
+        width: 220px;
+        float: left;
+
+        .nav_header {
+            font-weight: bold;
+            font-size: 20px;
         }
-        .list-group
-        {
-            a.current{
-                background-color:#eee;
+
+        .list-group {
+            a.current {
+                background-color: #eee;
             }
         }
     }
-    .about_us_content{
-        padding-top:60px;
-        margin-left:20px;
-        width:780px;
-        float:left;
-        text-align:center;
+
+    .about_us_content {
+        padding-top: 10px;
+        margin-left: 20px;
+        width: 780px;
+        float: left;
+        text-align: center;
     }
 }
-
