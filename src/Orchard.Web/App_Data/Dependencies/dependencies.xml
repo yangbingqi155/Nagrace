@@ -903,8 +903,8 @@
   </Dependency>
   <Dependency>
     <ModuleName>Orchard.Advertise</ModuleName>
-    <VirtualPath>~/Modules/Orchard.Advertise/Orchard.Advertise.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Orchard.Advertise/bin/Orchard.Advertise.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
       <Reference>
         <Name>MSTranslitTools</Name>

@@ -1,6 +1,22 @@
-﻿.featured .item {
-    float:left;
+﻿.featured {
+    width: 1272px;
+    margin: 0 auto;
+
+    .item {
+        float: left;
+        border:2px solid  #f6f7f7;
+        img {
+        }
+    }
 }
-.featured .item img{
-    width:310px;
+
+@media screen and (max-width:1272px) {
+    .featured {
+        width: 1020px;
+        .item {
+            img {
+                width:336px;
+            }
+        }
+    }
 }

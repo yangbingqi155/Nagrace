@@ -8,4 +8,11 @@
         @Html.TextBoxFor(model=>model.SortID)
         @Html.ValidationMessageFor(model=>model.SortID)
     </div>
+    <div class="editor-label">
+        @Html.LabelFor(model => model.Link, T(Html.DisplayNameFor(model => model.Link).ToHtmlString()))
+    </div>
+    <div class="editor-field">
+        @Html.TextBoxFor(model => model.Link,new {@class= "text large" })
+        @Html.ValidationMessageFor(model => model.Link)
+    </div>
 </fieldset>

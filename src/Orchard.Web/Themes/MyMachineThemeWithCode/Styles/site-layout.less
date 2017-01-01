@@ -49,6 +49,14 @@
     width: 200px;
 }
 
+/*
+    Zone Featured 
+*******************************/
+#layout-featured {
+    width: 100%;
+    margin-top: 30px;
+}
+
 /*zone navigation
 *******************************/
 #layout-navigation {
@@ -57,7 +65,7 @@
 }
 
 .zone-navigation {
-    width: @center_width;
+    width: 1024px;
     margin: 0 auto;
 
     ul.navbar-nav {
@@ -146,13 +154,12 @@
     float: left;
     width: 190px;
     height: 235px;
-    border-left:1px solid #C5C5C5;
-    padding-left:15px;
+    padding-left: 15px;
 }
 
 .footer-quad h2 {
     font-weight: bold;
-    font-size: 22px;
+    font-size: 18px;
 }
 
 .footer-quad ul {
@@ -166,13 +173,27 @@
 .footer-quad ul.list-unstyled li a {
     text-decoration: none;
     color: #333333;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 30px;
+}
+
+#footer-quad #footer-quad-fourth {
+    width: 270px;
+}
+
+.follow_us_icon_box {
+    margin-top: 10px;
+    padding-left: 15px;
+
+    img {
+    }
 }
 
 #layout-footer {
     padding: 20px 0 0 0;
     width: 100%;
+    margin-top: 40px;
+    border-top: 2px solid #f6f7f7;
 }
 
 #footer {
@@ -200,6 +221,37 @@
         color: #333333;
     }
 }
+
+ul.nav_path {
+    margin: 0;
+    padding: 20px 0;
+
+    li:first-child {
+        margin-left: 0;
+    }
+
+    li {
+        margin-left: 10px;
+        list-style-type: none;
+        float: left;
+
+        span {
+            color: #333333;
+            font-size: 16px;
+        }
+
+        a {
+            color: #888;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        a:hover {
+            color: #333333;
+        }
+    }
+}
+
 /*
     About Us
 */
@@ -229,5 +281,71 @@
         width: 780px;
         float: left;
         text-align: center;
+    }
+}
+
+/*
+Download page
+***************************/
+.download_box {
+    margin: 0 auto;
+    width: 1024px;
+
+    h2 {
+        color: rgb(102, 102, 102);
+        font-size: 20px;
+    }
+
+    .download_products {
+        padding-top: 20px;
+
+        .item:first-child {
+            margin-left: 0;
+        }
+
+        .item {
+            border: 1px solid #f6f7f7;
+            width: 156px;
+            text-align: center;
+            float: left;
+            margin-left: 20px;
+
+            .p_img {
+            }
+
+            a.p_name {
+                font-size: 16px;
+                text-align: center;
+                text-decoration: none;
+                color: rgb(102, 102, 102);
+                height: 50px;
+                line-height: 50px;
+            }
+
+            a:hover {
+                color: #333;
+            }
+        }
+    }
+}
+
+.firmware_update_box {
+    margin: 0 auto;
+    width: 1024px;
+    padding-bottom: 250px;
+
+    span.firmware_main_title {
+        font-size: 20px;
+        height:70px;
+        line-height:70px;
+    }
+
+    .firmware_info {
+        .firmware_title {
+        }
+
+        .firmware_description {
+            margin-top:10px;
+        }
     }
 }

@@ -17,5 +17,15 @@ namespace Orchard.Advertise.Models {
             get { return Retrieve(r => r.SortID); }
             set { Store(r => r.SortID, value); }
         }
+        /// <summary>
+        /// 链接
+        /// </summary>
+        [DisplayName("Link of advertise ")]
+        public string Link
+        {
+            get { return Retrieve(r => r.Link); }
+            set { Store(r => r.Link, value); }
+        }
+
     }
 }

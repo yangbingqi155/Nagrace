@@ -11,6 +11,7 @@ namespace Orchard.Advertise {
             SchemaBuilder.CreateTable(typeof(AdvertisePartRecord).Name,
                 table => table.ContentPartRecord()
                     .Column<int>("SortID")
+                    .Column<string>("Link")
                 );
             
             ContentDefinitionManager.AlterPartDefinition(typeof(AdvertisePart).Name, builder => {
@@ -39,7 +40,7 @@ namespace Orchard.Advertise {
                     .WithPart("AdvertiseHomePart")
                 );
 
-            return 5;
+            return 6;
         }
 
         public int UpdateFrom1() {
@@ -83,6 +84,13 @@ namespace Orchard.Advertise {
                     .WithPart("AdvertiseHomePart")
                 );
             return 5;
+        }
+
+        public int UpdateFrom5() {
+            SchemaBuilder.AlterTable(typeof(AdvertisePartRecord).Name,
+                table => table.AddColumn<string>("Link")
+                );
+            return 6;
         }
 
     }
