@@ -11,7 +11,9 @@
     }
     @Display(Model.CommentsCount)- @blogPost.CommonPart.Owner.UserName
 </div>
- 
-<img src="@blogPost.BlogPost.ImageTitle.Url   " class="attachment-post-thumbnail wp-post-image blog_post-thumbnail" alt="">
+ @if (!String.IsNullOrEmpty(blogPost.BlogPost.ImageTitle.Url)) {
+    <img src="@Url.Content(blogPost.BlogPost.ImageTitle.Url)" class="attachment-post-thumbnail wp-post-image blog_post-thumbnail" alt="">
+ }
+
 @Display(Model.Summary)
 <hr />
