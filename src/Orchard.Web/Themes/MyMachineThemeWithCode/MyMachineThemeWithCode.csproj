@@ -228,6 +228,7 @@
     <Content Include="Views\Parts\RecentComments.cshtml" />
     <Content Include="Views\Parts\Common.Body.Summary.cshtml" />
     <Content Include="Views\Parts\TagCloud.cshtml" />
+    <Content Include="Views\User.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Orchard\Orchard.Framework.csproj">
