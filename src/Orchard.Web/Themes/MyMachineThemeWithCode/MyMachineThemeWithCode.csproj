@@ -203,7 +203,7 @@
     <Content Include="Styles\bootstrap-3.3.5\less\variables.less" />
     <Content Include="Styles\bootstrap-3.3.5\less\wells.less" />
     <Content Include="App_Data\Localization\zh-CN\orchard.theme.po" />
-    <None Include="Styles\default-grid.less" />
+    <None Include="Styles\default-grid-overide.less" />
     <Content Include="Styles\bootstrap-3.3.5\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Views\Layout-url-category-blog-post-category.cshtml" />
     <None Include="Styles\site-home.less" />

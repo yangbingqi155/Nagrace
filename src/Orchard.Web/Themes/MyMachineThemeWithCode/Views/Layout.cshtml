@@ -2,7 +2,7 @@
     // To support the layout classifaction below. Implementing as a razor function because we can, could otherwise be a Func<string[], string, string> in the code block following.
     string CalcuClassify(string[] zoneNames, string classNamePrefix) {
         var zoneCounter = 0;
-        var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : "";}).ToArray());
+        var zoneNumsFilled = string.Join("", zoneNames.Select(zoneName => { ++zoneCounter; return Model[zoneName] != null ? zoneCounter.ToString() : ""; }).ToArray());
         return HasText(zoneNumsFilled) ? classNamePrefix + zoneNumsFilled : "";
     }
 }
@@ -70,35 +70,39 @@
 
 @tag.StartElement
 
-@if (Model.Header != null) {
 <header id="layout-header" class="group">
     <div id="header">
-        @Zone(Model.Header)
+        @if (Model.Header != null) {
+            @Zone(Model.Header)
+        }
+        else {
+            <div style="width:100%;height:30px;"></div>
+        }
     </div>
 </header>
-}
+
 @if (Model.Navigation != null) {
-<div id="layout-navigation" class="group">
-    @Zone(Model.Navigation)
-    <div class="sub-nav" id="nav_products">
-        <div class="item first-item default">
-            <a href="@Url.Content("~/products/360-Camera")"><img src="@Url.Content("~/Media/Default/Products/product_03.jpg")" /></a>
-            <a href="/products/360-Camera" class="product_name">360 Cam</a>
-        </div>
-        <div class="item default">
-            <a href="@Url.Content("~/Products/NT-V6")"><img src="@Url.Content("~/Media/Default/Products/product_05.jpg")" /></a>
-            <a href="/Products/NT-V6" class="product_name">NT-V6</a>
-        </div>
-        <div class="item default">
-            <a href="@Url.Content("~/Products/NT-N8-RK3229")"><img src="@Url.Content("~/Media/Default/Products/product_07.jpg")" /></a>
-            <a href="/Products/NT-N8-RK3229" class="product_name">NT-N8</a>
-        </div>
-        <div class="item default">
-            <a href="@Url.Content("~/Products/HPH-Meeting-Box")"><img src="@Url.Content("~/Media/Default/Products/product_09.jpg")" /></a>
-            <a href="/Products/HPH-Meeting-Box" class="product_name">HPH Meeting Box</a>
+    <div id="layout-navigation" class="group">
+        @Zone(Model.Navigation)
+        <div class="sub-nav" id="nav_products" style="display:none;">
+            <div class="item first-item default">
+                <a href="@Url.Content("~/products/360-Camera")"><img src="@Url.Content("~/Media/Default/Products/product_03.jpg")" /></a>
+                <a href="/products/360-Camera" class="product_name">Infinite 360Cam</a>
+            </div>
+            <div class="item default">
+                <a href="@Url.Content("~/Products/NT-V6")"><img src="@Url.Content("~/Media/Default/Products/product_05.jpg")" /></a>
+                <a href="/Products/NT-V6" class="product_name">NT-V6</a>
+            </div>
+            <div class="item default">
+                <a href="@Url.Content("~/Products/NT-N8-RK3229")"><img src="@Url.Content("~/Media/Default/Products/product_07.jpg")" /></a>
+                <a href="/Products/NT-N8-RK3229" class="product_name">NT-N8</a>
+            </div>
+            <div class="item default">
+                <a href="@Url.Content("~/Products/HPH-Meeting-Box")"><img src="@Url.Content("~/Media/Default/Products/product_09.jpg")" /></a>
+                <a href="/Products/HPH-Meeting-Box" class="product_name">Meeting Box</a>
+            </div>
         </div>
     </div>
-</div>
 
 }
 @if (Model.BeforeMain != null) {
@@ -107,95 +111,96 @@
     </div>
 }
 @if (Model.Featured != null) {
-<div id="layout-featured" class="group">
-    @Zone(Model.Featured)
-</div>
+    <div id="layout-featured" class="group">
+        @Zone(Model.Featured)
+    </div>
 }
 <div id="layout-main-container">
-<div id="layout-main" class="group">
-    @if (Model.AsideFirst != null) {
-    <aside id="aside-first" class="aside-first group">
-        @Zone(Model.AsideFirst)
-    </aside>
-    }
-    <div id="layout-content" class="group">
-        @if (Model.Messages != null) {
-        <div id="messages">
-            @Zone(Model.Messages)
-        </div>
+    <div id="layout-main" class="group">
+        @if (Model.AsideFirst != null) {
+            <aside id="aside-first" class="aside-first group">
+                @Zone(Model.AsideFirst)
+            </aside>
         }
-        @if (Model.BeforeContent != null) {
-        <div id="before-content">
-            @Zone(Model.BeforeContent)
+        <div id="layout-content" class="group">
+            @if (Model.Messages != null) {
+                <div id="messages">
+                    @Zone(Model.Messages)
+                </div>
+            }
+            @if (Model.BeforeContent != null) {
+                <div id="before-content">
+                    @Zone(Model.BeforeContent)
+                </div>
+            }
+            @* the model content for the page is in the Content zone @ the default position (nothing, zero, zilch) *@
+            @if (Model.Content != null) {
+                <div id="content" class="group">
+                    @Zone(Model.Content)
+                </div>
+            }
+            @if (Model.AfterContent != null) {
+                <div id="after-content">
+                    @Zone(Model.AfterContent)
+                </div>
+            }
         </div>
-        }
-        @* the model content for the page is in the Content zone @ the default position (nothing, zero, zilch) *@
-        @if (Model.Content != null) {
-        <div id="content" class="group">
-            @Zone(Model.Content)
-        </div>
-        }
-        @if (Model.AfterContent != null) {
-        <div id="after-content">
-            @Zone(Model.AfterContent)
-        </div>
+        @if (Model.AsideSecond != null) {
+            <aside id="aside-second" class="aside-second">
+                @Zone(Model.AsideSecond)
+            </aside>
         }
     </div>
-    @if (Model.AsideSecond != null) {
-    <aside id="aside-second" class="aside-second">
-        @Zone(Model.AsideSecond)
-    </aside>
-    }
-</div>
 </div>
 @if (Model.AfterMain != null) {
-<div id="layout-after-main" class="group">
-    @Zone(Model.AfterMain)
-</div>
+    <div id="layout-after-main" class="group">
+        @Zone(Model.AfterMain)
+    </div>
 }
 @if (Model.TripelFirst != null || Model.TripelSecond != null || Model.TripelThird != null) {
-<div id="layout-tripel-container">
-<div id="layout-tripel" class="group">@* as in beer *@
-    @if (Model.TripelFirst != null) {
-    <div id="tripel-first">
-        @Zone(Model.TripelFirst)
+    <div id="layout-tripel-container">
+        <div id="layout-tripel" class="group">
+            @* as in beer *@
+        @if (Model.TripelFirst != null) {
+            <div id="tripel-first">
+                @Zone(Model.TripelFirst)
+            </div>
+        }
+        @if (Model.TripelSecond != null) {
+            <div id="tripel-second">
+                @Zone(Model.TripelSecond)
+            </div>
+        }
+        @if (Model.TripelThird != null) {
+            <div id="tripel-third">
+                @Zone(Model.TripelThird)
+            </div>
+        }
     </div>
-    }
-    @if (Model.TripelSecond != null) {
-    <div id="tripel-second">
-        @Zone(Model.TripelSecond)
-    </div>
-    }
-    @if (Model.TripelThird != null) {
-    <div id="tripel-third">
-        @Zone(Model.TripelThird)
-    </div>
-    }
-</div>
 </div>
 }
 <div id="layout-footer" class="group">
     <footer id="footer">
         <div id="footer-quad" class="group">
             @if (Model.FooterQuadFirst != null) {
-            <div id="footer-quad-first">
-                @Zone(Model.FooterQuadFirst)
-            </div>
+                <div id="footer-quad-first">
+                    @Zone(Model.FooterQuadFirst)
+                </div>
             }
             @if (Model.FooterQuadSecond != null) {
-            <div id="footer-quad-second">
-                @Zone(Model.FooterQuadSecond)
-            </div>
+                <div id="footer-quad-second">
+                    @Zone(Model.FooterQuadSecond)
+                </div>
             }
             @if (Model.FooterQuadThird != null) {
-            <div id="footer-quad-third">
-                @Zone(Model.FooterQuadThird)
-            </div>
+                <div id="footer-quad-third">
+                    @Zone(Model.FooterQuadThird)
+                </div>
             }
             @if (Model.FooterQuadFourth != null) {
-            <div id="footer-quad-fourth">
-                @Zone(Model.FooterQuadFourth)
-            </div>
+                <div id="footer-quad-fourth">
+                    @Zone(Model.FooterQuadFourth)
+                </div>
             }
             @if (Model.FooterQuadFive != null) {
                 <div id="footer-quad-fourth">
@@ -203,10 +208,10 @@
                 </div>
             }
         </div>
-        @if(Model.Footer != null) {
-        <div id="footer-sig" class="group">
-            @Zone(Model.Footer)
-        </div>
+        @if (Model.Footer != null) {
+            <div id="footer-sig" class="group">
+                @Zone(Model.Footer)
+            </div>
         }
     </footer>
 </div>

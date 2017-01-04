@@ -24,7 +24,7 @@ namespace MyMachineThemeWithCode {
 
             //Less css file
             //default
-            manifest.DefineStyle("DefaultGrid").SetUrl("default-grid.less").SetAttribute("rel", "stylesheet/less");
+            manifest.DefineStyle("DefaultGrid").SetUrl("default-grid-overide.less").SetAttribute("rel", "stylesheet/less");
             manifest.DefineStyle("SiteDefault").SetUrl("site-default.less").SetAttribute("rel", "stylesheet/less");
             manifest.DefineStyle("SiteLayout").SetUrl("site-layout.less").SetAttribute("rel", "stylesheet/less");
             manifest.DefineStyle("SiteHome").SetUrl("site-home.less").SetAttribute("rel", "stylesheet/less");

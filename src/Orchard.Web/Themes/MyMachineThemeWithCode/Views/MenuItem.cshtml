@@ -4,11 +4,25 @@
 }
 
 @{
+    string page = Request.RawUrl;
+    if (Model.Text.Text == "Home" && page == "/") {
+        Model.Classes.Add("current");
+    }
+    else if (Model.Text.Text == "Products" && page.ToLower().IndexOf("products") >=0) {
+        Model.Classes.Add("current");
+    }
+    else if (Model.Text.Text == "Download" && page.ToLower().IndexOf("download") >= 0) {
+        Model.Classes.Add("current");
+    }
+    else if (Model.Text.Text == "About Us" && page.ToLower().IndexOf("aboutus") >= 0) {
+        Model.Classes.Add("current");
+    }
+
     if (!HasText(Model.Text)) {
         @DisplayChildren(Model)
     }
     else {
-        if ((bool) Model.Selected) {
+        if ((bool)Model.Selected) {
             Model.Classes.Add("active");
         }
 
@@ -17,18 +31,24 @@
         }
 
         @* morphing the shape to keep Model untouched*@
-        Model.Metadata.Alternates.Clear();
-        Model.Metadata.Type = "MenuItemLink";
-        if (items.Any()) {
-            Model.Metadata.Type = "MenuItemLinkdd";
-        }
+Model.Metadata.Alternates.Clear();
+Model.Metadata.Type = "MenuItemLink";
+if (items.Any()) {
+    Model.Metadata.Type = "MenuItemLinkdd";
+}
 
         @* render the menu item only if it has some content *@
-        var renderedMenuItemLink = Display(Model);
-        if (HasText(renderedMenuItemLink)) {
-            var tag = Tag(Model, "li");
-            @tag.StartElement
-            @renderedMenuItemLink
+var renderedMenuItemLink = Display(Model);
+if (HasText(renderedMenuItemLink) && Model.Text.Text != "Sign In") {
+    var tag = Tag(Model, "li");
+    @tag.StartElement
+            if (Model.Text.Text != "Blog") {
+                @renderedMenuItemLink
+            }
+            else {
+               <a target="_blank" href="/our-blog">Blog</a>
+            }
+
             <img class="menu_icon_down" src="@Url.Content("~/Media/Default/Icon/icon_down.jpg")" />
             if (items.Any()) {
                 <ul class="dropdown-menu">

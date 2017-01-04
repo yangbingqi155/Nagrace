@@ -22,7 +22,7 @@
     <ExtensionId>MyMachineThemeWithCode</ExtensionId>
     <LoaderName>DynamicExtensionLoader</LoaderName>
     <VirtualPath>~/Themes/MyMachineThemeWithCode/MyMachineThemeWithCode.csproj</VirtualPath>
-    <Hash>dff4f7c5266c28a9</Hash>
+    <Hash>dff51c8fd05ce293</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Advertise</ExtensionId>

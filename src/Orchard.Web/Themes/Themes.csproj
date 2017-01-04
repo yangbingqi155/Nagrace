@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -97,11 +97,6 @@
     <Content Include="MyMachineTheme\Theme.txt" />
     <Content Include="MyMachineTheme\Theme.png" />
     <Content Include="MyMachineTheme\Placement.info" />
-    <Folder Include="MyMachineTheme\Assets" />
-    <Folder Include="MyMachineTheme\Content" />
-    <Folder Include="MyMachineTheme\Styles" />
-    <Folder Include="MyMachineTheme\Scripts" />
-    <Folder Include="MyMachineTheme\Views" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -147,8 +142,6 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="TheAdmin\Views\Menu.cshtml" />
-    <Content Include="TheThemeMachine\Views\Branding.cshtml" />
-    <Content Include="TheThemeMachine\Views\BadgeOfHonor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TheAdmin\Styles\images\icons.png" />
@@ -174,7 +167,6 @@
     <Content Include="TheAdmin\Theme.png" />
     <Content Include="TheAdmin\Views\User.cshtml" />
     <Content Include="TheAdmin\Views\Header.cshtml" />
-    <Content Include="TheThemeMachine\Views\Layout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TheThemeMachine\Styles\Web.config">
@@ -212,11 +204,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="TheThemeMachine\Views\Pager.cshtml" />
-    <Content Include="TheThemeMachine\Views\Pager.First.cshtml" />
-    <Content Include="TheThemeMachine\Views\Pager.Last.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="TheAdmin\Views\ErrorPage.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -224,6 +211,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="MyMachineTheme\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TheThemeMachine\Views\BadgeOfHonor.cshtml" />
+    <Content Include="TheThemeMachine\Views\Branding.cshtml" />
+    <Content Include="TheThemeMachine\Views\Layout.cshtml" />
+    <Content Include="TheThemeMachine\Views\Pager.cshtml" />
+    <Content Include="TheThemeMachine\Views\Pager.First.cshtml" />
+    <Content Include="TheThemeMachine\Views\Pager.Last.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
