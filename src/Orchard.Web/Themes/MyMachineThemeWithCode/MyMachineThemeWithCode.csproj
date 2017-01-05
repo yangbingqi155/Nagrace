@@ -209,6 +209,7 @@
     <None Include="Styles\site-home.less" />
     <Content Include="Styles\Wow\animate.css" />
     <Content Include="ThemeZonePreview.png" />
+    <Content Include="Views\Layout-url-tags.cshtml" />
     <None Include="Views\Parts\NavigateComment.cshtml" />
     <Content Include="Web.config" />
     <Content Include="Scripts\Web.config" />
