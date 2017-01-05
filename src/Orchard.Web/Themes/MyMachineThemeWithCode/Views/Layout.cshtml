@@ -75,9 +75,9 @@
         @if (Model.Header != null) {
             @Zone(Model.Header)
         }
-        else {
+        @*else {
             <div style="width:100%;height:30px;"></div>
-        }
+        }*@
     </div>
 </header>
 
@@ -87,7 +87,7 @@
         <div class="sub-nav" id="nav_products" style="display:none;">
             <div class="item first-item default">
                 <a href="@Url.Content("~/products/360-Camera")"><img src="@Url.Content("~/Media/Default/Products/product_03.jpg")" /></a>
-                <a href="/products/360-Camera" class="product_name">Infinite 360Cam</a>
+                <a href="/products/360-Camera" class="product_name">HPH 360 Cam</a>
             </div>
             <div class="item default">
                 <a href="@Url.Content("~/Products/NT-V6")"><img src="@Url.Content("~/Media/Default/Products/product_05.jpg")" /></a>
