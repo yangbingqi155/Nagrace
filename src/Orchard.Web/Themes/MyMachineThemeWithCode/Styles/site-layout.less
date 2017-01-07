@@ -80,6 +80,7 @@
 .zone-navigation {
     padding: 0;
     width: 1024px;
+    min-width: 1024px;
     margin: 0 auto;
 
     ul.navbar-nav {
@@ -118,15 +119,26 @@
     display: none;
 }
 
-.sub-nav {
-    top: 100px;
-    display: none;
-    position: absolute;
-    width: 100%;
+.sub-nav_box{
+    width:100%;
     height: 185px;
     border-top: 1px solid #F6F6F6;
     z-index: 10000;
     background-color: #FFFFFF;
+    text-align:center;
+    top: 100px;
+    left:0;
+    bottom:0;
+    right:0;
+    position: absolute;
+    border-bottom:2px solid #f6f7f7;
+
+}
+.sub-nav {
+    width: 788px;
+    min-width:788px;
+    height: 185px;
+    margin:0 auto;
 }
 
 .sub-nav .item {
@@ -153,7 +165,7 @@
 }
 
 .sub-nav .first-item {
-    margin-left: 40%;
+    
 }
 
 .sub-nav .first-item img {

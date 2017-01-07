@@ -84,26 +84,28 @@
 @if (Model.Navigation != null) {
     <div id="layout-navigation" class="group">
         @Zone(Model.Navigation)
-        <div class="sub-nav" id="nav_products" style="display:none;">
-            <div class="item first-item default">
-                <a href="@Url.Content("~/products/360-Camera")"><img src="@Url.Content("~/Media/Default/Products/product_03.jpg")" /></a>
-                <a href="/products/360-Camera" class="product_name">HPH 360 Cam</a>
-            </div>
-            <div class="item default">
-                <a href="@Url.Content("~/Products/NT-V6")"><img src="@Url.Content("~/Media/Default/Products/product_05.jpg")" /></a>
-                <a href="/Products/NT-V6" class="product_name">NT-V6</a>
-            </div>
-            <div class="item default">
-                <a href="@Url.Content("~/Products/NT-N8-RK3229")"><img src="@Url.Content("~/Media/Default/Products/product_07.jpg")" /></a>
-                <a href="/Products/NT-N8-RK3229" class="product_name">NT-N8</a>
-            </div>
-            <div class="item default">
-                <a href="@Url.Content("~/Products/HPH-Meeting-Box")"><img src="@Url.Content("~/Media/Default/Products/product_09.jpg")" /></a>
-                <a href="/Products/HPH-Meeting-Box" class="product_name">Meeting Box</a>
-            </div>
-            <div class="item default">
-                <a href="@Url.Content("~/Products/NT-V9-RK3399")"><img src="@Url.Content("~/Media/Default/Products/product_11.jpg")" /></a>
-                <a href="/Products/NT-V9-RK3399" class="product_name">NT-V9 RK3399</a>
+        <div class="sub-nav_box"  id="nav_products" style="display:none;">
+            <div class="sub-nav" >
+                <div class="item first-item default">
+                    <a href="@Url.Content("~/products/360-Camera")"><img src="@Url.Content("~/Media/Default/Products/product_03.jpg")" /></a>
+                    <a href="/products/360-Camera" class="product_name">HPH 360 Cam</a>
+                </div>
+                <div class="item default">
+                    <a href="@Url.Content("~/Products/NT-V6")"><img src="@Url.Content("~/Media/Default/Products/product_05.jpg")" /></a>
+                    <a href="/Products/NT-V6" class="product_name">NT-V6</a>
+                </div>
+                <div class="item default">
+                    <a href="@Url.Content("~/Products/NT-N8-RK3229")"><img src="@Url.Content("~/Media/Default/Products/product_07.jpg")" /></a>
+                    <a href="/Products/NT-N8-RK3229" class="product_name">NT-N8</a>
+                </div>
+                <div class="item default">
+                    <a href="@Url.Content("~/Products/HPH-Meeting-Box")"><img src="@Url.Content("~/Media/Default/Products/product_09.jpg")" /></a>
+                    <a href="/Products/HPH-Meeting-Box" class="product_name">Meeting Box</a>
+                </div>
+                <div class="item default">
+                    <a href="@Url.Content("~/Products/NT-V9-RK3399")"><img src="@Url.Content("~/Media/Default/Products/product_11.jpg")" /></a>
+                    <a href="/Products/NT-V9-RK3399" class="product_name">NT-V9 RK3399</a>
+                </div>
             </div>
         </div>
     </div>
