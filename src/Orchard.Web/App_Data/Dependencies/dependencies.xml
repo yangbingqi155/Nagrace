@@ -100,13 +100,33 @@
   </Dependency>
   <Dependency>
     <ModuleName>Magelia.WebStore</ModuleName>
-    <VirtualPath>~/Modules/Magelia.WebStore/Magelia.WebStore.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Magelia.WebStore/bin/Magelia.WebStore.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
+      <Reference>
+        <Name>Magelia.WebStore.Client</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Magelia.WebStore/bin/Magelia.WebStore.Client.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Forms</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Forms/bin/Orchard.Forms.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Tokens</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Tokens/bin/Orchard.Tokens.dll</VirtualPath>
+      </Reference>
       <Reference>
         <Name>Orchard.Users</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Users/bin/Orchard.Users.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Orchard.Workflows</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Orchard.Workflows/bin/Orchard.Workflows.dll</VirtualPath>
       </Reference>
     </References>
   </Dependency>
@@ -379,6 +399,16 @@
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
       <Reference>
+        <Name>Markdown</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/Markdown.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>MarkdownSharp</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/MarkdownSharp.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Orchard.Alias</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.Alias/bin/Orchard.Alias.dll</VirtualPath>
@@ -632,7 +662,7 @@
       <Reference>
         <Name>MSTranslitTools</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Alias</Name>
@@ -756,7 +786,7 @@
       <Reference>
         <Name>MSTranslitTools</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Alias</Name>
@@ -879,7 +909,7 @@
       <Reference>
         <Name>MSTranslitTools</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Alias</Name>
@@ -1534,6 +1564,16 @@
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
       <Reference>
+        <Name>Markdown</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/Markdown.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>MarkdownSharp</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Markdown/bin/MarkdownSharp.dll</VirtualPath>
+      </Reference>
+      <Reference>
         <Name>Mono.CSharp</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
         <VirtualPath>~/Modules/Orchard.DynamicForms/bin/Mono.CSharp.dll</VirtualPath>
@@ -1895,7 +1935,7 @@
       <Reference>
         <Name>MSTranslitTools</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
-        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.dll</VirtualPath>
+        <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MSTranslitTools.DLL</VirtualPath>
       </Reference>
       <Reference>
         <Name>Orchard.Alias</Name>
@@ -2445,9 +2485,19 @@
   </Dependency>
   <Dependency>
     <ModuleName>Vandelay.TranslationManager</ModuleName>
-    <VirtualPath>~/Modules/Vandelay.TranslationManager/Vandelay.TranslationManager.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/Vandelay.TranslationManager/bin/Vandelay.TranslationManager.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <References>
+      <Reference>
+        <Name>Fluent.IO</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Vandelay.TranslationManager/bin/Fluent.IO.dll</VirtualPath>
+      </Reference>
+      <Reference>
+        <Name>Fluent.Zip</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/Vandelay.TranslationManager/bin/Fluent.Zip.dll</VirtualPath>
+      </Reference>
       <Reference>
         <Name>ICSharpCode.SharpZipLib</Name>
         <LoaderName>PrecompiledExtensionLoader</LoaderName>
@@ -2457,9 +2507,15 @@
   </Dependency>
   <Dependency>
     <ModuleName>VirtoCommerce.Webshop</ModuleName>
-    <VirtualPath>~/Modules/VirtoCommerce.Webshop/VirtoCommerce.Webshop.csproj</VirtualPath>
-    <LoaderName>DynamicExtensionLoader</LoaderName>
-    <References />
+    <VirtualPath>~/Modules/VirtoCommerce.Webshop/bin/VirtoCommerce.Webshop.dll</VirtualPath>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <References>
+      <Reference>
+        <Name>VirtoCommerce.ApiClient</Name>
+        <LoaderName>PrecompiledExtensionLoader</LoaderName>
+        <VirtualPath>~/Modules/VirtoCommerce.Webshop/bin/VirtoCommerce.ApiClient.dll</VirtualPath>
+      </Reference>
+    </References>
   </Dependency>
   <Dependency>
     <ModuleName>XmlRpc</ModuleName>

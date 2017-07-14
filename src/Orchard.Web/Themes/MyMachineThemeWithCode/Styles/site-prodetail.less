@@ -2900,46 +2900,80 @@ ul.reviews_container {
         }
     }
 }
+
 .main_p_img_sub_N9_screen {
     width: 100%;
     text-align: center;
     margin: 0 auto;
-  
+
     .detail_img {
         width: 100%;
     }
 }
+
 .main_p_img_sub_N9_mediaplayer {
     width: 100%;
     text-align: center;
     margin: 0 auto;
     position: relative;
-
+    padding-bottom:40px;
     .pro_title {
         .meetingbox_large_title_blue;
-        color: #FFFFFF;
+        color: #333333;
         text-align: center;
         width: 100%;
-        padding-top:40px;
+        padding-top: 40px;
     }
 
-    .detail_img {
+    .pro_sub_title {
+        font-size: 20px;
+        color: #333333;
+        text-align: center;
         width: 100%;
+        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
-    .description {
-        width: 100%;
-        position: absolute;
-        bottom: 30px;
-        left: 0;
+    .detail_img_box {
+        text-align: center;
+        margin: 0 auto;
 
-        ul {
-            li {
-                list-style: none;
-                color: #FFFFFF;
-                font-size: 20px;
-                margin-top: 10px;
-                text-align: center;
+        .detail_img {
+            float: left;
+        }
+
+        .detail_sub_img {
+            float: left;
+        }
+    }
+}
+
+@media screen and (min-width:1420px) {
+    .main_p_img_sub_N9_mediaplayer {
+        .detail_img_box {
+            width: 1414px;
+
+            .detail_sub_img {
+                margin-left: -240px;
+                margin-top: 250px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1420px) {
+    .main_p_img_sub_N9_mediaplayer {
+        .detail_img_box {
+            width: 1024px;
+
+            .detail_img {
+                width: 690px;
+            }
+
+            .detail_sub_img {
+                width: 550px;
+                margin-left: -218px;
+                margin-top: 188px;
             }
         }
     }
