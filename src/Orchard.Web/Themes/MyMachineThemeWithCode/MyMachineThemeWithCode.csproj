@@ -99,6 +99,7 @@
     <Content Include="Assets\Styles.less" />
     <Content Include="Content\Images\theme\logo.png" />
     <Content Include="Content\Images\theme\logo-tips.png" />
+    <Content Include="Content\Images\theme\skype.png" />
     <Content Include="Scripts\bootstrap-3.3.5\js\affix.js" />
     <Content Include="Scripts\bootstrap-3.3.5\js\alert.js" />
     <Content Include="Scripts\bootstrap-3.3.5\js\bootstrap.js" />
