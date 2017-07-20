@@ -22,7 +22,13 @@
     <ExtensionId>MyMachineThemeWithCode</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Themes/MyMachineThemeWithCode/bin/MyMachineThemeWithCode.dll</VirtualPath>
-    <Hash>972beb7ecb047cd4</Hash>
+    <Hash>972bf0383d3b98f4</Hash>
+  </Dependency>
+  <Dependency>
+    <ExtensionId>NGM.Forum</ExtensionId>
+    <LoaderName>PrecompiledExtensionLoader</LoaderName>
+    <VirtualPath>~/Modules/NGM.Forum/bin/NGM.Forum.dll</VirtualPath>
+    <Hash>4a73693373e29caa</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>Orchard.Advertise</ExtensionId>
@@ -430,7 +436,7 @@
     <ExtensionId>PJS.Bootstrap</ExtensionId>
     <LoaderName>PrecompiledExtensionLoader</LoaderName>
     <VirtualPath>~/Themes/PJS.Bootstrap/bin/PJS.Bootstrap.dll</VirtualPath>
-    <Hash>e05d8a679d138d5b</Hash>
+    <Hash>96f0bf810224ab2b</Hash>
   </Dependency>
   <Dependency>
     <ExtensionId>SysCache</ExtensionId>
